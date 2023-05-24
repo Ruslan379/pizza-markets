@@ -18,11 +18,18 @@ import { Home } from 'components/Home/Home';
 import { ShoppingCart } from 'components/ShoppingCart/ShoppingCart';
 import { NotFound } from "page/NotFound";
 
+import pizzaMarkets from "db/pizzaMarkets.json"; //! json
+
 // import css from './App.module.css';
 
 
+//------------------------------------------------------------
 export const App = () => {
 
+  console.log("pizzaMarkets:", pizzaMarkets);
+  // const shops = JSON.parse(pizzaMarkets);
+  const markets = pizzaMarkets.map(market => market.shop);
+  console.log("markets:", markets);
 
 
 

@@ -1,0 +1,20 @@
+.list {
+
+    /* margin: 0; */
+    /* padding: 0; */
+    list-style: none;
+    
+}
+
+.listItem {
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    
+}
+
+.selectShopButton {
+    width: 150px;
+    padding: 10px;
+
+}
