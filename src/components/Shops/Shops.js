@@ -1,33 +1,47 @@
-import pizzaMarkets from "db/pizzaMarkets.json";
+// import pizzaMarkets from "db/pizzaMarkets.json";
 
 
 import css from "./Shops.module.css";
 
 
 
+//------------------------------------------------------
+export const Shops = ({ pizzaMarkets, selectShop }) => {
+    console.log("Shops-->pizzaMarkets:", pizzaMarkets);
 
-export const Shops = () => {
-    console.log("pizzaMarkets:", pizzaMarkets);
-    // const shops = JSON.parse(pizzaMarkets);
-    const markets = pizzaMarkets.map(market => market.shop);
-    console.log("markets:", markets);
+    // const selectShop = id => {
+    //     const [selectShopPizzas] = pizzaMarkets.filter(pizzaMarket => pizzaMarket.id === id);
+    //     console.log("id:", id);
+    //     console.log("selectShopPizzas:", selectShopPizzas);
+
+    //     // const allPizzas = selectShopPizzas.pizzas;
+    //     console.log("allPizzas:", selectShopPizzas.pizzas);
+
+    //     selectShopPizzas.pizzas.map(item => {
+    //         return console.log(`Pizza:${item.pizza}, Price=${item.price}`);
+    //     })
+    // };
 
 
     return (
-        <ul className={css.list}>
-            {markets.map((market, index) => (
-                <li
-                    className={css.listItem}
-                    key={index}
-                >
-                    <button
-                        className={css.selectShopButton}
-                        type="button"
+        <>
+            <p className={css.headerShops}>Shops:</p>
+            <ul className={css.list}>
+                {pizzaMarkets.map(pizzaMarket => (
+                    <li
+                        className={css.listItem}
+                        key={pizzaMarket.id}
                     >
-                        {market}
-                    </button>
-                </li>
-            ))}
-        </ul>
+                        <button
+                            className={css.selectShopButton}
+                            type="button"
+                            onClick={() => selectShop(pizzaMarket.id)}
+                        >
+                            {pizzaMarket.shop}
+                        </button>
+                    </li>
+                ))}
+            </ul>
+        </>
     );
 };
