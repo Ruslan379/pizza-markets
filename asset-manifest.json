@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/pizza-markets/static/css/main.7acaea2f.css",
+    "main.js": "/pizza-markets/static/js/main.07d3183d.js",
+    "index.html": "/pizza-markets/index.html",
+    "main.7acaea2f.css.map": "/pizza-markets/static/css/main.7acaea2f.css.map",
+    "main.07d3183d.js.map": "/pizza-markets/static/js/main.07d3183d.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.7acaea2f.css",
+    "static/js/main.07d3183d.js"
+  ]
+}
