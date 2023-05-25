@@ -9,10 +9,10 @@ export const ShoppingCart = () => {
         <div className={css.shoppingCartContainer}>
             <div className={css.shoppingCarttaskContainer}>
                 <div className={css.сustomerData}>
-                    Customer Data
+                    Shopping Cart Customer Data
                 </div>
                 <div className={css.CustomerOrder}>
-                    Customer Order
+                    Shopping Cart Customer Order
                 </div>
             </div>
         <div className={css.shoppingCartPriceSubmitContainer}>

@@ -23,18 +23,18 @@ export const Home = () => {
 
     //! Выбор магазина
     const selectShop = id => {
-        // setIdMarket(id); //! не нужен
         const [selectShopPizzas] = pizzaMarkets.filter(pizzaMarket => pizzaMarket.id === id);
-        console.log("id:", id);
-        console.log("selectShopPizzas:", selectShopPizzas);
+        console.log("Home-->id:", id); //!
+        console.log("Home-->selectShopPizzas:", selectShopPizzas); //!
 
-        // const allPizzas = selectShopPizzas.pizzas;
-        console.log("allPizzas:", selectShopPizzas.pizzas);
+
+        console.log("Home-->allPizzas:", selectShopPizzas.pizzas); //!
         setaAlPizzas(selectShopPizzas.pizzas);
 
-        selectShopPizzas.pizzas.map(item => {
-            return console.log(`Pizza:${item.pizza}, Price=${item.price}`);
-        })
+        //!
+        // selectShopPizzas.pizzas.map(item => {
+        //     return console.log(`Pizza:${item.pizza}, Price=${item.price}`); //!
+        // })
     };
 
     //! Добаление пиццы в заказ
@@ -43,38 +43,48 @@ export const Home = () => {
 
         //! Проверка на добавление имеющейся пиццы
         const findIndexPizza = allChoicePizzas.findIndex(item => item.pizza === pizza.pizza);
-        console.log("Home-->findIndexPizza:", findIndexPizza);
+        console.log("addPizzaToCard-->findIndexPizza:", findIndexPizza);
 
         if (findIndexPizza === -1) {
             const pizzaAndQuantity = {
             ...pizza,
             quantity: 1
             };
-            console.log("Home-->pizzaAndQuantity:", pizzaAndQuantity); //!
+            console.log("addPizzaToCard-->pizzaAndQuantity:", pizzaAndQuantity); //!
             setAllChoicePizzas([...allChoicePizzas, pizzaAndQuantity]);
             localStorage.setItem("allChoicePizzas", JSON.stringify([...allChoicePizzas, pizzaAndQuantity]));
         } else {
-            const newAllChoicePizzas = allChoicePizzas.map((item, index) => {
-                if (index === findIndexPizza) {
-                    console.log("Надо добавить + 1"); //!
-                    console.log("Home-->item.quantity :", item.quantity); //!
-                    item.quantity = item.quantity + 1;
-                    console.log("Home-->NEW item.quantity :", item.quantity); //!
-                } 
-            console.log("newAllChoicePizzas-->allChoicePizzas :", allChoicePizzas); //!
-            return allChoicePizzas
+            //todo ----------------------------
+            // const newAllChoicePizzas = allChoicePizzas.map((item, index) => {
+            //     if (index === findIndexPizza) {
+            //         console.log("Надо добавить + 1"); //!
+            //         console.log("addPizzaToCard-->item.quantity :", item.quantity); //!
+            //         item.quantity = item.quantity + 1;
+            //         console.log("addPizzaToCard-->NEW item.quantity :", item.quantity); //!
+            //     } 
+            // console.log("addPizzaToCard-->allChoicePizzas :", allChoicePizzas); //!
+            // return allChoicePizzas
+            // });
+            // console.log("addPizzaToCard-->allChoicePizzas :", allChoicePizzas); //!
+            // console.log("addPizzaToCard-->newAllChoicePizzas :", newAllChoicePizzas); //!
+            // setAllChoicePizzas([...allChoicePizzas]);
+            // localStorage.setItem("allChoicePizzas", JSON.stringify([...allChoicePizzas]));
+            //todo _______________________________
+            
+            allChoicePizzas.map((item, index) => {
+                if (index === findIndexPizza) item.quantity = item.quantity + 1;
+                return allChoicePizzas
             });
-        console.log("Home-->allChoicePizzas :", allChoicePizzas); //!
-        console.log("Home-->newAllChoicePizzas :", newAllChoicePizzas); //!
-        setAllChoicePizzas([...allChoicePizzas]);
-        localStorage.setItem("allChoicePizzas", JSON.stringify([...allChoicePizzas]));
+            
+            console.log("addPizzaToCard-->allChoicePizzas :", allChoicePizzas); //!
+            setAllChoicePizzas([...allChoicePizzas]);
+            localStorage.setItem("allChoicePizzas", JSON.stringify([...allChoicePizzas]));
         }
     }
 
 
-
-    console.log("Home-->allPizzas:", allPizzas);
-    console.log("Home-->allChoicePizzas:", allChoicePizzas);
+    console.log("Home-->allPizzas:", allPizzas); //!
+    console.log("Home-->allChoicePizzas:", allChoicePizzas); //!
 
     return (
         <div className={css.homeContainer}>
