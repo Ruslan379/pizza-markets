@@ -14,6 +14,7 @@ export const SharedLayout = () => {
       <nav className={css.navFlex}>
         <NavLink className={css.navLink} to="/">Shop</NavLink>
         <NavLink className={css.navLink} to="/cart">Shopping Cart</NavLink>
+        <NavLink className={css.navLink} to="/history">Order History</NavLink>
       </nav>
       <Outlet />
     </div>
