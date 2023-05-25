@@ -1,3 +1,4 @@
+// import { useState } from "react";
 import { ShoppingCartOrder } from 'components/ShoppingCartOrder/ShoppingCartOrder';
 
 import css from './ShoppingCart.module.css';
@@ -5,9 +6,13 @@ import css from './ShoppingCart.module.css';
 
 //------------------------------------------------------
 export const ShoppingCart = () => {
+    // const togle = () => setValue(!value)
     //! Чтение массива объектов с заказанными пиццами --> allChoicePizzasLocalStorage
     const allChoicePizzasLocalStorage = JSON.parse(localStorage.getItem("allChoicePizzas"));
     console.log("ShoppingCartOrder-->allChoicePizzasLocalStorage:", allChoicePizzasLocalStorage);
+
+    // const [allChoicePizzas, setAllChoicePizzas] = useState(allChoicePizzasLocalStorage || []);
+    // console.log("ShoppingCart-->allChoicePizzas:", allChoicePizzas);
 
     //! Подсчетобщей суммы
     let totalPrice = 0;
@@ -20,6 +25,7 @@ export const ShoppingCart = () => {
     console.log("ShoppingCart-->totalPrice:", totalPrice); //!
 
 
+    // setAllChoicePizzas([])
 
 
 
