@@ -7,12 +7,6 @@ import {
 import css from './SharedLayout.module.css';
 
 //------------------------------------------------------------------------------------
-
-
-
-
-
-
 export const SharedLayout = () => {
 
   return (

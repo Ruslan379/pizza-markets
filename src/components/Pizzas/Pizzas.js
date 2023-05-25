@@ -32,9 +32,9 @@ export const Pizzas = ({ allPizzas, addPizzaToCard }) => {
                     <p className={css.namePizza}
                     >
                         "{item.pizza}"
-                        <spam className={css.pricePizza}>
+                        <span className={css.pricePizza}>
                             {item.price} грн.
-                        </spam>
+                        </span>
                     </p>
                     <button
                         className={css.selectPizzaButton}
