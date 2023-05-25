@@ -65,11 +65,51 @@
     color: red;
 }
 
-
-.selectPizzaButton {
-    margin-top: 10px;
-    align-self: flex-end;
-    /* text-align: right; */
+.inputQuantity {
     width: 100px;
     padding: 4px;
+    margin-top: 5px;
+    text-align: center;
+    /* text-align: right; */
+    
+}
+
+
+
+.shoppingCartPriceSubmitContainer {
+    position: absolute;
+        bottom: 45px;
+        right: 145px;
+    /* width: 50%; */
+    /* height: 90%; */
+    /* display: flex; */
+
+    /* justify-content: flex-end; */
+    /* align-items: center; */
+    /* gap: 40px; */
+
+    /* outline: 1px solid blue; */
+}
+
+
+.totalPriceText {
+    /* display: block; */
+    /* width:30%; */
+    /* align-self: flex-start; */
+    /* margin-top: 10px; */
+    text-align: center;
+    font-size: 1.1em;
+    color: blue;
+
+    /* outline: 1px solid green; */
+}
+
+
+.totalPriceNumber {
+    /* margin-left: 1%; */
+    /* margin-right: auto; */
+    font-size: 1.0em;
+    color: red;
+
+    /* outline: 1px solid red; */
 }

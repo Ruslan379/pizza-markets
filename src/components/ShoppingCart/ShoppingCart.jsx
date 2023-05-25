@@ -1,5 +1,6 @@
 // import { useState } from "react";
 import { ShoppingCartOrder } from 'components/ShoppingCartOrder/ShoppingCartOrder';
+// import { TotalPrice } from 'components/TotalPrice/TotalPrice';
 
 import css from './ShoppingCart.module.css';
 
@@ -14,15 +15,19 @@ export const ShoppingCart = () => {
     // const [allChoicePizzas, setAllChoicePizzas] = useState(allChoicePizzasLocalStorage || []);
     // console.log("ShoppingCart-->allChoicePizzas:", allChoicePizzas);
 
-    //! Подсчетобщей суммы
-    let totalPrice = 0;
-    if (allChoicePizzasLocalStorage) {
-        totalPrice = allChoicePizzasLocalStorage.reduce((total, item) => {
-        total = total + item.price * item.quantity;
-        return total;
-    }, 0);
-    };
-    console.log("ShoppingCart-->totalPrice:", totalPrice); //!
+    // const [totalPrice1, setTotalPrice1] = useState(0);
+    // console.log("ShoppingCart-->totalPrice1:", totalPrice1);
+
+    //! Подсчет общей суммы (перенесен в ShoppingCartOrder)
+    // let totalPrice = 0;
+    // if (allChoicePizzasLocalStorage) {
+    //     totalPrice = allChoicePizzasLocalStorage.reduce((total, item) => {
+    //         total = total + item.price * item.quantity;
+    //         // setTotalPrice1(total);
+    //         return total;
+    //     }, 0);
+    // };
+    // console.log("ShoppingCart-->totalPrice:", totalPrice); //!
 
 
     // setAllChoicePizzas([])
@@ -40,22 +45,21 @@ export const ShoppingCart = () => {
                     <ShoppingCartOrder />
                 </div>
             </div>
-        <div className={css.shoppingCartPriceSubmitContainer}>
-            <p className={css.totalPriceText}
+            <div className={css.shoppingCartPriceSubmitContainer}>
+                {/* <p className={css.totalPriceText}
                     >
                         Total price:
                         <span className={css.totalPriceNumber}> {totalPrice} грн.</span>
-                    </p>
-            <button
-                className={css.submitButton}
-                type="button"
-                // onClick={() => addPizzaToCard(allPizzas[index])}
-                >
-                    Submit
-            </button>
-        </div>
-            
-            
+                </p> */}
+                {/* <TotalPrice totalPrice={totalPrice}/> */}
+                <button
+                    className={css.submitButton}
+                    type="button"
+                    // onClick={() => addPizzaToCard(allPizzas[index])}
+                    >
+                        Submit
+                </button>
+            </div>
         </div>
     );
 };

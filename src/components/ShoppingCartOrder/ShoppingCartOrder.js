@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import imagePizza from "images/monopizza_pica-dyabola.jpg";
+// import { TotalPrice } from 'components/TotalPrice/TotalPrice';
 
 
 import css from "./ShoppingCartOrder.module.css";
@@ -13,6 +14,18 @@ export const ShoppingCartOrder = () => {
     //! Чтение массива объектов с заказанными пиццами --> allChoicePizzasLocalStorage
     const allChoicePizzasLocalStorage = JSON.parse(localStorage.getItem("allChoicePizzas"));
     console.log("ShoppingCartOrder-->allChoicePizzasLocalStorage:", allChoicePizzasLocalStorage);
+
+    //! Подсчет общей суммы
+    let totalPrice = 0;
+    if (allChoicePizzasLocalStorage) {
+        totalPrice = allChoicePizzasLocalStorage.reduce((total, item) => {
+            total = total + item.price * item.quantity;
+            // setTotalPrice1(total);
+            return total;
+        }, 0);
+    };
+    console.log("ShoppingCart-->totalPrice:", totalPrice); //!
+
 
     //! ------------------ ИИ
     // import React, { useState } from 'react';
@@ -46,15 +59,28 @@ export const ShoppingCartOrder = () => {
     //     console.log("inputValue:", evt.target.value);
     // };
 
-    const handleIncrement = (allChoicePizzasLocalStorageIndex) => {
-        console.log("ShoppingCartOrder_Increment-->allChoicePizzasLocalStorageIndex:", allChoicePizzasLocalStorageIndex);
-        // setValue(value + 1);
-    };
+    // const handleIncrement = (allChoicePizzasLocalStorageIndex) => {
+    //     console.log("ShoppingCartOrder_Increment-->allChoicePizzasLocalStorageIndex:", allChoicePizzasLocalStorageIndex);
+    //     // setValue(value + 1);
+    // };
 
-    const handleDecrement = (allChoicePizzasLocalStorageIndex) => {
-        console.log("ShoppingCartOrder_Decrement-->allChoicePizzasLocalStorageIndex:", allChoicePizzasLocalStorageIndex);
-        // setValue(value - 1);
-    };
+    // const handleDecrement = (allChoicePizzasLocalStorageIndex) => {
+    //     console.log("ShoppingCartOrder_Decrement-->allChoicePizzasLocalStorageIndex:", allChoicePizzasLocalStorageIndex);
+    //     // setValue(value - 1);
+    // };
+
+    //! так не работает
+    // const onChangeQuantity = (evt, index) => {
+    //     console.log("inputValue:", evt.target.value);
+    //     console.log("index:", index);
+    //     togle();
+    //     // allChoicePizzasLocalStorage[index].quantity = allChoicePizzasLocalStorage[index].quantity + 1; //! на кнопку
+    //     allChoicePizzasLocalStorage[index].quantity = evt.target.value;
+    //     localStorage.setItem("allChoicePizzas", JSON.stringify([...allChoicePizzasLocalStorage]));
+    // }
+
+
+
 
 
     return (
@@ -77,84 +103,63 @@ export const ShoppingCartOrder = () => {
                                 <p className={css.pricePizza}>{item.price * item.quantity} грн.</p>
 
                                 <div>
-                                    <input
+                                    <input className={css.inputQuantity}
                                         type="number"
                                         name="quantity"
+                                        min="1"
+                                        max="100"
                                         // value={item.quantity}
                                         defaultValue={item.quantity}
-                                        // onChange={handleChange}
+
                                         onChange={(evt) => {
                                             console.log("inputValue:", evt.target.value);
                                             console.log("index:", index);
                                             togle()
                                             // allChoicePizzasLocalStorage[index].quantity = allChoicePizzasLocalStorage[index].quantity + 1; //! на кнопку
-                                            allChoicePizzasLocalStorage[index].quantity = evt.target.value;
+                                            allChoicePizzasLocalStorage[index].quantity = Number(evt.target.value);
                                             localStorage.setItem("allChoicePizzas", JSON.stringify([...allChoicePizzasLocalStorage]));
                                         }}
+                                    // onChange={() => onChangeQuantity(_, index)} //! так не работает
                                     />
-                                    <button
-                                        // onClick={handleIncrement}
+                                    {/* <button
                                         onClick={() => handleIncrement(allChoicePizzasLocalStorage[index])}
                                     >
                                         Увеличить
-                                    </button>
-                                    <button
-                                        // onClick={handleDecrement}
+                                    </button> */}
+                                    {/* <button
                                         onClick={() => handleDecrement(allChoicePizzasLocalStorage[index])}
                                     >
                                         Уменьшить
-                                    </button>
+                                    </button> */}
                                 </div>
 
-                                <form
-                                    className={css.Form}
-                                // onSubmit={handleSubmit}
-                                >
-                                    <label
-                                        className={css.FormLabel}
-                                    >
-                                        {/* Balance:&nbsp;&nbsp;&nbsp; */}
-                                        {/* {isRefreshing ? "Please wait..." : "Balance"} */}
-                                        <input
-                                            className={css.FormInput}
-                                            // id="inputName"
-                                            type="text"
-                                            // name="balance"
-                                            name="quantity"
-                                            // disabled={NotNewUser} //! пока не блокировать
-                                            // required
-                                            value={item.quantity}
-                                        // readonly
-                                        // defaultValue={balanceNew} //! тормозит
-                                        // placeholder={balanceNew}
-                                        // defaultValue={(balanceNew) ? balanceNew : balanceAuth}
-                                        // onChange={handleSubmit}
-                                        />
-                                    </label>
-                                </form>
-
-
-                                <button
+                                {/* <button
                                     className={css.increaseButton}
                                     type="button"
                                 // onClick={() => addPizzaToCard(allChoicePizzasLocalStorage[index])}
                                 >
                                     Increase ^
-                                </button>
-                                <button
+                                </button> */}
+
+                                {/* <button
                                     className={css.decreaseButton}
                                     type="button"
                                 // onClick={() => addPizzaToCard(allChoicePizzasLocalStorage[index])}
                                 >
                                     Decrease .
-                                </button>
+                                </button> */}
                             </div>
-
-
                         </li>
                     ))}
                 </ul>
             )}
+            <div className={css.shoppingCartPriceSubmitContainer}>
+                <p className={css.totalPriceText}
+                >
+                    Total price:
+                    <span className={css.totalPriceNumber}> {totalPrice} грн.</span>
+                </p>
+            </div>
         </>
 
     );
