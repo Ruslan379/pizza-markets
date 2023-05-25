@@ -113,3 +113,5 @@
  */
 
 //! Redux Toolkit 
+
+//! Чтение массива объектов с заказанными пиццами --> allChoicePizzasLocalStorage
