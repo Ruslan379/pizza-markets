@@ -28,9 +28,9 @@
     outline: 1px solid blue;
 }
 
-.shoppingCarttaskContainer {
+.shoppingCartTaskContainer {
     width: 100%;
-    height: 100%;
+    height: 90%;
     display: flex;
     /* flex-direction: column; */
     /* justify-content: center; */
@@ -57,7 +57,7 @@
 
 .shoppingCartPriceSubmitContainer {
     width: 100%;
-    /* height: 100%; */
+    /* height: 90%; */
     display: flex;
 
     justify-content: flex-end;
@@ -75,6 +75,7 @@
 }
 
 .CustomerOrder {
+    overflow-y: auto;
     width: 50%;
     height: 100%;
 
