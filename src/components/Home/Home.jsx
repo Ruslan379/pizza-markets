@@ -37,27 +37,22 @@ export const Home = () => {
         })
     };
 
-    //! Выбор пиццы
+    //! Добаление пиццы в заказ
     const addPizzaToCard = pizza => {
         console.log("Home-->-->pizza:", pizza);
 
-        // const pizzaAnQuantity = {
-        //     ...pizza,
-        //     quantity: 1
-        // };
-        // console.log("Home-->pizzaAnQuantity:", pizzaAnQuantity);
-
+        //! Проверка на добавление имеющейся пиццы
         const findIndexPizza = allChoicePizzas.findIndex(item => item.pizza === pizza.pizza);
         console.log("Home-->findIndexPizza:", findIndexPizza);
 
         if (findIndexPizza === -1) {
-            const pizzaAnQuantity = {
+            const pizzaAndQuantity = {
             ...pizza,
             quantity: 1
-        };
-        console.log("Home-->pizzaAnQuantity:", pizzaAnQuantity);
-        setAllChoicePizzas([...allChoicePizzas, pizzaAnQuantity]);
-        localStorage.setItem("allChoicePizzas", JSON.stringify([...allChoicePizzas, pizzaAnQuantity]));
+            };
+            console.log("Home-->pizzaAndQuantity:", pizzaAndQuantity); //!
+            setAllChoicePizzas([...allChoicePizzas, pizzaAndQuantity]);
+            localStorage.setItem("allChoicePizzas", JSON.stringify([...allChoicePizzas, pizzaAndQuantity]));
         } else {
             const newAllChoicePizzas = allChoicePizzas.map((item, index) => {
                 if (index === findIndexPizza) {
@@ -74,27 +69,10 @@ export const Home = () => {
         setAllChoicePizzas([...allChoicePizzas]);
         localStorage.setItem("allChoicePizzas", JSON.stringify([...allChoicePizzas]));
         }
-
-
-        // const newAllChoicePizzas = allChoicePizzas.map((item, index) => {
-        //         if (index === findIndexPizza) {
-        //             console.log("Надо добавить + 1");
-        //             console.log("Home-->item.quantity :", item.quantity);
-        //             item.quantity = item.quantity + 1;
-        //             console.log("Home-->NEW item.quantity :", item.quantity);
-        //         }
-        //     console.log("newAllChoicePizzas-->allChoicePizzas :", allChoicePizzas); 
-        //     return allChoicePizzas
-        //     });
-        // console.log("Home-->allChoicePizzas :", allChoicePizzas);
-        // console.log("Home-->newAllChoicePizzas :", newAllChoicePizzas);
-
-        // setAllChoicePizzas([...allChoicePizzas, pizza]);
-        // localStorage.setItem("allChoicePizzas", JSON.stringify([...allChoicePizzas, pizza]));
     }
 
 
-    // console.log("Home-->idMarket:", idMarket); //! не нужен
+
     console.log("Home-->allPizzas:", allPizzas);
     console.log("Home-->allChoicePizzas:", allChoicePizzas);
 
