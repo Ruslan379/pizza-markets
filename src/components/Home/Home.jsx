@@ -10,9 +10,14 @@ import css from './Home.module.css';
 
 //------------------------------------------------------
 export const Home = () => {
-    // const [idMarket, setIdMarket] = useState(0); //! не нужен
+    //! Чтение массива объектов с заказанными пиццами --> allChoicePizzasLocalStorage
+    const allChoicePizzasLocalStorage = JSON.parse(localStorage.getItem("allChoicePizzas"));
+    console.log("Home-->allChoicePizzasLocalStorage:", allChoicePizzasLocalStorage);
+
+
     const [allPizzas, setaAlPizzas] = useState([]);
-    const [allChoicePizzas, setAllChoicePizzas] = useState([]);
+    const [allChoicePizzas, setAllChoicePizzas] = useState(allChoicePizzasLocalStorage || []);
+    console.log("Home-->allChoicePizzas:", allChoicePizzas);
 
     console.log("Home-->pizzaMarkets:", pizzaMarkets);
 
@@ -36,6 +41,7 @@ export const Home = () => {
     const addPizzaToCard = pizza => {
         console.log("Home-->-->pizza:", pizza);
         setAllChoicePizzas([...allChoicePizzas, pizza]);
+        localStorage.setItem("allChoicePizzas", JSON.stringify([...allChoicePizzas, pizza]));
     }
 
 
