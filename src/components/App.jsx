@@ -38,7 +38,7 @@ export const App = () => {
       <Route path="*" element={<NotFound />} />
       <Route path="/" element={<SharedLayout />} >
         <Route index element={<Home />} />
-        <Route path="/сart" element={<ShoppingCart/>} ></Route>
+        <Route path="/cart" element={<ShoppingCart/>} ></Route>
       </Route> 
     </Routes>
   
