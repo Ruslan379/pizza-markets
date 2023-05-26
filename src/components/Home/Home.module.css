@@ -49,38 +49,9 @@
     border: 2px solid rgb(120, 196, 130);
         border-radius: 8px;
         box-shadow: 12px 12px 18px rgba(59, 43, 14, 0.23);
-        
+
     /* outline: 1px solid tomato; */
 }
 
 
 
-
-
-
-
-.titleText {
-    /* padding-bottom: 20px; */
-    /* text-decoration: overline; */
-    /* text-transform: capitalize; */
-    /* text-align: justify; */
-    /* text-align: left; */
-    /* text-indent: 100px; */
-    /* line-height: 1.5; */
-    /* letter-spacing: inherit; */
-    /* letter-spacing: 4px; */
-    /* word-spacing: 8px; */
-    /* white-space: pre-wrap; */
-
-    color: #c01d1d;
-    text-shadow: 4px 4px 8px #555555;
-    /* text-shadow: 12px 12px 12px #9e4949,
-        5px 5px 5px #696969; */
-
-    font-size: 24px;
-    font-weight: 700;
-    /* font-style: oblique; */
-    /* font-style: italic; */
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    /* font-family: 'Tangerine', cursive; */
-}

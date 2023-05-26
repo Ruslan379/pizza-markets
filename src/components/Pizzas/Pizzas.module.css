@@ -47,20 +47,19 @@
 }
 
 .selectPizzaButton {
-    margin-top: 10px;
+    margin-top: 15px;
+    margin-right: 10px;
+    margin-bottom: 10px;
     align-self: flex-end;
-    /* text-align: right; */
-    /* width: 150px; */
-    /* padding: 4px; */
 
     display: inline-block;
     text-decoration: none;
-    margin-left: 20px;
     padding: 8px 16px;
     font-weight: 700;
     border: solid 1px;
     border-radius: 4px;
     color: #2a363b;
+    box-shadow: 8px 8px 18px rgba(59, 43, 14, 0.23);
 }
 
 .selectPizzaButton:hover,

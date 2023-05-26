@@ -30,6 +30,7 @@
     border: solid 1px;
     border-radius: 4px;
     color: #2a363b;
+    box-shadow: 12px 12px 18px rgba(59, 43, 14, 0.23);
 }
 
 .selectShopButton:hover,
