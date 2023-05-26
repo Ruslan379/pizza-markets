@@ -2,17 +2,11 @@
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
-    /* justify-content: center; */
     justify-content: flex-start;
-    /* margin-left: 0; */
-    /* margin-left: auto; */
-    /* margin-right: auto; */
-
     margin: 0;
-    /* padding: 10px; */
+    padding-top: 20px;
     list-style: none;
     padding-inline-start: 3%;
-    /* padding-inline-end: auto; */
 }
 
 .listItem {
@@ -20,18 +14,17 @@
     flex-direction: column;
     height: 35%;
     width: 45%;
-    /* flex-basis: 45%; */
     padding: 1%;
-    /* flex-direction: column; */
-    /* margin-top: 20px; */
-    /* margin-left: auto; */
-    /* margin-right: auto; */
-    outline: 1px solid tomato;
+
+    border: 2px solid rgb(120, 196, 130);
+        border-radius: 8px;
+        box-shadow: 12px 12px 18px rgba(59, 43, 14, 0.23);
+    
+    /* outline: 1px solid tomato; */
 }
 
 
 .namePizza {
-    /* align-self: flex-start; */
     margin-top: 10px;
     text-align: center;
     font-size: 1.1em;
@@ -40,16 +33,37 @@
 
 .pricePizza {
     margin-left: 10%;
-    /* margin-right: auto; */
     font-size: 1.0em;
     color: red;
 }
 
 
-.selectPizzaButton {
+.selectPizzaButton1 {
     margin-top: 10px;
     align-self: flex-end;
     /* text-align: right; */
     width: 100px;
     padding: 4px;
+}
+
+.selectPizzaButton {
+    margin-top: 10px;
+    align-self: flex-end;
+    /* text-align: right; */
+    /* width: 150px; */
+    /* padding: 4px; */
+
+    display: inline-block;
+    text-decoration: none;
+    margin-left: 20px;
+    padding: 8px 16px;
+    font-weight: 700;
+    border: solid 1px;
+    border-radius: 4px;
+    color: #2a363b;
+}
+
+.selectPizzaButton:hover,
+.selectPizzaButton:focus {
+    background-color: #c4c4c4;
 }

@@ -3,22 +3,17 @@
     text-align: center;
     margin: 0;
     margin-top: 10px;
-
-
 }
+
 .list {
     display: flex;
     flex-direction: column;
     gap: 40px;
     justify-content: center;
-    /* margin-left: 0; */
-
 
     margin: 0;
     padding: 10px;
     list-style: none;
-    /* padding-inline-start: 20px; */
-    
 }
 
 .listItem {
@@ -26,8 +21,6 @@
     margin-right: auto;
     
 }
-
-
 
 .selectShopButton {
     min-width: 140px;
