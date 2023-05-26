@@ -1,22 +1,6 @@
 /* import styled from '@emotion/styled'; */
-.linkButton {
-    position: absolute;
-    bottom: 100px;
-    right: 10%;
-    display: inline-block;
-    text-decoration: none;
-    margin-left: 20px;
-    padding: 8px 16px;
-    /* padding: 12px; */
-    font-weight: 700;
-    border: solid 1px;
-    border-radius: 4px;
-    color: #2a363b;
-}
 
 
-
-/* //todo */
 .orderHistoryContainer {
     width: 90%;
     height: 80%;
@@ -67,73 +51,22 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        gap: 18px;
 
     outline: 1px solid blue;
 }
 
-
-.totalPriceText {
-    /* display: block; */
-    /* width:30%; */
-    /* align-self: flex-start; */
-    /* margin-top: 10px; */
-    text-align: center;
-    font-size: 1.1em;
-    color: blue;
-
-    /* outline: 1px solid green; */
-}
-
-
-.totalPriceNumber {
-    
-    /* margin-left: 1%; */
-    /* margin-right: auto; */
-    font-size: 1.0em;
-    color: red;
-
-    /* outline: 1px solid red; */
-}
-
-
-
-
-.submitButton {
-    /* margin-top: 10px; */
-    /* align-self: flex-end; */
-    width: 100px;
-    padding: 4px;
-    /* outline: 1px solid yellow; */
-}
-
-
-
-
-
-
-
-.titleText {
-    /* padding-bottom: 20px; */
-    /* text-decoration: overline; */
-    /* text-transform: capitalize; */
-    /* text-align: justify; */
-    /* text-align: left; */
-    /* text-indent: 100px; */
-    /* line-height: 1.5; */
-    /* letter-spacing: inherit; */
-    /* letter-spacing: 4px; */
-    /* word-spacing: 8px; */
-    /* white-space: pre-wrap; */
-
-    color: #c01d1d;
-    text-shadow: 4px 4px 8px #555555;
-    /* text-shadow: 12px 12px 12px #9e4949,
-        5px 5px 5px #696969; */
-
-    font-size: 24px;
+.linkButton {
+    position: absolute;
+    bottom: 100px;
+    right: 10%;
+    display: inline-block;
+    text-decoration: none;
+    margin-left: 20px;
+    padding: 8px 16px;
+    /* padding: 12px; */
     font-weight: 700;
-    /* font-style: oblique; */
-    /* font-style: italic; */
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    /* font-family: 'Tangerine', cursive; */
+    border: solid 1px;
+    border-radius: 4px;
+    color: #2a363b;
 }
