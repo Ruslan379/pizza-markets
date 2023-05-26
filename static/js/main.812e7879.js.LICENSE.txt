@@ -112,14 +112,6 @@
  * LICENSE file in the root directory of this source tree.
  */
 
-//!
-
 //! Redux Toolkit 
 
 //! Подсчет общей суммы
-
-//! Подсчет общей суммы (перенесен в ShoppingCartOrder)
-
-//! Проверка на добавление имеющейся пиццы
-
-//! Чтение массива объектов с заказанными пиццами --> allChoicePizzasLocalStorage
