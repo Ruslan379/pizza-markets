@@ -22,10 +22,11 @@
     /* border: 2px solid #01b80a; */
     /* border-radius: 20px; */
     
+    border-radius: 8px;
     background-color: #e3fae2;
     box-shadow: 12px 12px 18px rgba(59, 43, 14, 0.23);
 
-    outline: 1px solid blue;
+    /* outline: 1px solid blue; */
 }
 
 
