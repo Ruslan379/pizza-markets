@@ -5,31 +5,13 @@
     height: 100vh;
     display: flex;
     flex-direction: column;
-    /* justify-content: center; */
-    /* align-items: center; */
-    /* font-size: 40px; */
-    color: #010101;
-
     padding: 20px;
-    
-    /* margin-bottom: 20px; */
-
-    /* border: 2px solid #ffad7a; */
-    /* border-radius: 20px; */
-    
-    /* background-color: #faebe2; */
 }
-/* ----------------------------------------------- */
+
 .navFlex {
     display: flex;
-    /* text-align: left; */
-    /* align-items: start; */
     margin-left: 4%;
-    /* margin-right: auto; */
     gap: 50px;
-    
-    
-    /* text-decoration: none; */
 }
 
 .navLink {
@@ -37,22 +19,12 @@
     text-decoration: none;
     font-size: 20px;
     font-weight: 700;
-    /* text-align: left; */
 }
 
 .navLink:active {
     color: orange;
     text-decoration: underline;
 }
-
-/* .navLinkHome {
-    color: black;
-    text-decoration: none;
-    font-size: 30px;
-    font-weight: 700;
-    color: rgb(31, 85, 0);
-    margin-bottom: 10px;
-} */
 
 
 

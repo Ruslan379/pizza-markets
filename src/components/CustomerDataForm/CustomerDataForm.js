@@ -6,10 +6,7 @@ import css from './CustomerDataForm.module.css';
 
 export const CustomerDataForm = () => {
     const navigate = useNavigate();
-
-    //! Чтение массива объектов с данными заказчика --> customerDataLocalStorage
     let customerDataLocalStorage = JSON.parse(localStorage.getItem("customerData"));
-    console.log("CustomerDataForm-->customerDataLocalStorage:", customerDataLocalStorage);
 
     if (!customerDataLocalStorage) {
         const customerData = {
@@ -19,7 +16,6 @@ export const CustomerDataForm = () => {
             address: "",
         };
         localStorage.setItem("customerData", JSON.stringify(customerData));
-        console.log("CustomerDataForm-->IF:", customerData); //!
         customerDataLocalStorage = JSON.parse(localStorage.getItem("customerData"));
     };
 
@@ -33,14 +29,11 @@ export const CustomerDataForm = () => {
             address: form.elements.address.value,
         };
         localStorage.setItem("customerData", JSON.stringify(customerData));
-        console.log("CustomerDataForm-->handleSubmit:", customerData); //!
         form.reset();
         navigate("/history", { replace: true });
     };
 
 
-
-    console.log("CustomerDataForm_2-->customerDataLocalStorage:", customerDataLocalStorage);
 
 
     return (
@@ -48,14 +41,12 @@ export const CustomerDataForm = () => {
             <form
                 className={css.form}
                 onSubmit={handleSubmit}
-            // autoComplete="off"
             >
                 <label className={css.label}>
                     Name:
                     <input
                         type="text"
                         name="name"
-                        // placeholder={"Input you Name"}
                         placeholder={customerDataLocalStorage.name ? customerDataLocalStorage.name : "Input you Name"}
                         defaultValue={customerDataLocalStorage.name}
                     />
@@ -65,7 +56,6 @@ export const CustomerDataForm = () => {
                     <input
                         type="email"
                         name="email"
-                        // placeholder={"Input you Email"}
                         placeholder={customerDataLocalStorage.email ? customerDataLocalStorage.email : "Input you Email"}
                         defaultValue={customerDataLocalStorage.email}
                     />
@@ -75,7 +65,6 @@ export const CustomerDataForm = () => {
                     <input
                         type="text"
                         name="phone"
-                        // placeholder={"Input you Phone"}
                         placeholder={customerDataLocalStorage.phone ? customerDataLocalStorage.phone : "Input you Phone"}
                         defaultValue={customerDataLocalStorage.phone}
                     />
@@ -85,7 +74,6 @@ export const CustomerDataForm = () => {
                     <input
                         type="text"
                         name="address"
-                        // placeholder={"Input you Address"}
                         placeholder={customerDataLocalStorage.address ? customerDataLocalStorage.address : "Input you Address"}
                         defaultValue={customerDataLocalStorage.address}
                     />

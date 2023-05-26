@@ -31,10 +31,6 @@ export const Home = () => {
         console.log("Home-->allPizzas:", selectShopPizzas.pizzas); //!
         setaAlPizzas(selectShopPizzas.pizzas);
 
-        //!
-        // selectShopPizzas.pizzas.map(item => {
-        //     return console.log(`Pizza:${item.pizza}, Price=${item.price}`); //!
-        // })
     };
 
     //! Добаление пиццы в заказ
@@ -54,23 +50,7 @@ export const Home = () => {
             setAllChoicePizzas([...allChoicePizzas, pizzaAndQuantity]);
             localStorage.setItem("allChoicePizzas", JSON.stringify([...allChoicePizzas, pizzaAndQuantity]));
         } else {
-            //todo ----------------------------
-            // const newAllChoicePizzas = allChoicePizzas.map((item, index) => {
-            //     if (index === findIndexPizza) {
-            //         console.log("Надо добавить + 1"); //!
-            //         console.log("addPizzaToCard-->item.quantity :", item.quantity); //!
-            //         item.quantity = item.quantity + 1;
-            //         console.log("addPizzaToCard-->NEW item.quantity :", item.quantity); //!
-            //     } 
-            // console.log("addPizzaToCard-->allChoicePizzas :", allChoicePizzas); //!
-            // return allChoicePizzas
-            // });
-            // console.log("addPizzaToCard-->allChoicePizzas :", allChoicePizzas); //!
-            // console.log("addPizzaToCard-->newAllChoicePizzas :", newAllChoicePizzas); //!
-            // setAllChoicePizzas([...allChoicePizzas]);
-            // localStorage.setItem("allChoicePizzas", JSON.stringify([...allChoicePizzas]));
-            //todo _______________________________
-            
+
             allChoicePizzas.map((item, index) => {
                 if (index === findIndexPizza) item.quantity = item.quantity + 1;
                 return allChoicePizzas
@@ -89,14 +69,12 @@ export const Home = () => {
     return (
         <div className={css.homeContainer}>
             <div className={css.shops}>
-                {/* Shops Component */}
                 <Shops
                     pizzaMarkets={pizzaMarkets}
                     selectShop={selectShop}
                 />
             </div>
             <div className={css.pizzas}>
-                {/* Pizzas Component */}
                 <Pizzas
                     allPizzas={allPizzas}
                     addPizzaToCard={addPizzaToCard}
