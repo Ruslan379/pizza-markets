@@ -45,14 +45,9 @@ export const ShoppingCartOrder = () => {
                                         name="quantity"
                                         min="1"
                                         max="100"
-                                        // value={item.quantity}
                                         defaultValue={item.quantity}
-
                                         onChange={(evt) => {
-                                            console.log("inputValue:", evt.target.value);
-                                            console.log("index:", index);
-                                            togle()
-                                            // allChoicePizzasLocalStorage[index].quantity = allChoicePizzasLocalStorage[index].quantity + 1; //! на кнопку
+                                            togle();
                                             allChoicePizzasLocalStorage[index].quantity = Number(evt.target.value);
                                             localStorage.setItem("allChoicePizzas", JSON.stringify([...allChoicePizzasLocalStorage]));
                                         }}
