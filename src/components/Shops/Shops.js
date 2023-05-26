@@ -1,7 +1,6 @@
 import css from "./Shops.module.css";
 
 export const Shops = ({ pizzaMarkets, selectShop }) => {
-
     return (
         <>
             <p className={css.headerShops}>Shops:</p>
