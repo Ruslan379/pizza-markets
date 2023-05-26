@@ -54,13 +54,13 @@ export const ShoppingCart = () => {
                         <span className={css.totalPriceNumber}> {totalPrice} грн.</span>
                 </p> */}
                 {/* <TotalPrice totalPrice={totalPrice}/> */}
-                <button
+                {/* <button
                     className={css.submitButton}
                     type="button"
                     // onClick={() => addPizzaToCard(allPizzas[index])}
                     >
                         Submit
-                </button>
+                </button> */}
             </div>
         </div>
     );

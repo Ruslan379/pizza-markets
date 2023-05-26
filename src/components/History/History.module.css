@@ -70,3 +70,8 @@
     border-radius: 4px;
     color: #2a363b;
 }
+
+.linkButton:hover,
+.linkButton:focus {
+    background-color: #c4c4c4;
+}
