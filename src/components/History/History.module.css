@@ -17,7 +17,7 @@
 
 
 /* //todo */
-.shoppingCartContainer {
+.orderHistoryContainer {
     width: 90%;
     height: 80%;
     display: flex;
@@ -44,55 +44,29 @@
     outline: 1px solid blue;
 }
 
-.shoppingCarttaskContainer {
+
+.historyData {
     width: 100%;
-    height: 100%;
+    height: 35%;
+
     display: flex;
-    /* flex-direction: column; */
-    /* justify-content: center; */
-    /* align-items: center; */
-    gap: 40px;
-
-    /* padding: 20px; */
-    /* margin-left: auto; */
-    /* margin-right: auto; */
-    /* margin-top: 20px; */
-    /* margin-bottom: 20px; */
-
-    /* font-size: 18px; */
-    /* font-weight: 600; */
-
-    /* border: 2px solid #01b80a; */
-    /* border-radius: 20px; */
-
-    /* background-color: #fae2e2; */
-    /* box-shadow: 12px 12px 18px rgba(59, 43, 14, 0.23); */
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 12px;
+    
 
     outline: 1px solid blue;
 }
 
-.shoppingCartPriceSubmitContainer {
+.historyOrder {
     width: 100%;
-    /* height: 100%; */
+    height: 50%;
+
     display: flex;
-
-    justify-content: flex-end;
-    align-items: center;
-    gap: 40px;
-
-    /* outline: 1px solid blue; */
-}
-
-.сustomerData {
-    width: 50%;
-    height: 100%;
-
-    outline: 1px solid blue;
-}
-
-.CustomerOrder {
-    width: 50%;
-    height: 100%;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
 
     outline: 1px solid blue;
 }

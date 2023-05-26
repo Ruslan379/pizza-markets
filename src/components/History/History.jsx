@@ -4,36 +4,41 @@ import css from './History.module.css';
 
 //------------------------------------------------------
 export const History = () => {
+    //! Чтение массива объектов с данными заказчика --> customerDataLocalStorage
+    let customerDataLocalStorage = JSON.parse(localStorage.getItem("customerData"));
+    console.log("CustomerDataForm-->customerDataLocalStorage:", customerDataLocalStorage);
+
+    if (!customerDataLocalStorage) {
+        const customerData = {
+            name: "",
+            email: "",
+            phone: "",
+            address: "",
+        };
+        localStorage.setItem("customerData", JSON.stringify(customerData));
+        console.log("CustomerDataForm-->IF:", customerData); //!
+        customerDataLocalStorage = JSON.parse(localStorage.getItem("customerData"));
+    };
+
+    
+
+
     return (
-        <div className={css.shoppingCartContainer}>
-            <div className={css.shoppingCarttaskContainer}>
-                <div className={css.сustomerData}>
-                    History Data
-                </div>
-                <div className={css.CustomerOrder}>
-                    <p>History Order</p>
-                    <br/>
-                    {/* //* --- Кнопка Переход на страницу Shops: ----- */}
-                    <NavLink className={css.linkButton} to="/">SHOPS</NavLink>
+        <div className={css.orderHistoryContainer}>
+                <div className={css.historyData}>
+                    <p>You Data</p>
+                    <br />
+                    <p>You Name: {customerDataLocalStorage.name }</p>
+                    <p>You Email: {customerDataLocalStorage.email }</p>
+                    <p>You Phone: {customerDataLocalStorage.phone }</p>
+                    <p>You Address: {customerDataLocalStorage.address }</p>
                 </div>
                 
-            </div>
-        {/* <div className={css.shoppingCartPriceSubmitContainer}>
-            <p className={css.totalPriceText}
-                    >
-                        Total price:
-                        <span className={css.totalPriceNumber}> {"999"} грн.</span>
-                    </p>
-            <button
-                className={css.submitButton}
-                type="button"
-                // onClick={() => addPizzaToCard(allPizzas[index])}
-                >
-                    Submit
-            </button>
-        </div> */}
-            
-            
+                <div className={css.historyOrder}>
+                    <p>You Order</p>
+                </div>
+            {/* //* --- Кнопка Переход на страницу Shopping Cart: ----- */}
+            <NavLink className={css.linkButton} to="/cart">Change</NavLink>
         </div>
     );
 };

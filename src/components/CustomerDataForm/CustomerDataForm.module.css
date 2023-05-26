@@ -1,16 +1,17 @@
 .form {
-    width: 320px;
+    /* width: 320px; */
+    width: 80%;
 }
 
 .label {
     display: flex;
     flex-direction: column;
-    margin-bottom: 16px;
+    margin-bottom: 40px;
 }
 
 .submitButtonForm {
     position: absolute;
-        bottom: 37px;
+        bottom: 33px;
         right: 35px;
     display: inline-block;
     text-decoration: none;
