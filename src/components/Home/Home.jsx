@@ -8,7 +8,6 @@ import { Pizzas } from 'components/Pizzas/Pizzas';
 import css from './Home.module.css';
 
 
-//------------------------------------------------------
 export const Home = () => {
     const allChoicePizzasLocalStorage = JSON.parse(localStorage.getItem("allChoicePizzas"));
 
