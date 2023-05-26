@@ -1,5 +1,4 @@
-
-
+import { NavLink } from 'react-router-dom';
 import css from './History.module.css';
 
 
@@ -12,8 +11,12 @@ export const History = () => {
                     History Data
                 </div>
                 <div className={css.CustomerOrder}>
-                    History Order
+                    <p>History Order</p>
+                    <br/>
+                    {/* //* --- Кнопка Переход на страницу Shops: ----- */}
+                    <NavLink className={css.linkButton} to="/">SHOPS</NavLink>
                 </div>
+                
             </div>
         {/* <div className={css.shoppingCartPriceSubmitContainer}>
             <p className={css.totalPriceText}

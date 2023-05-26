@@ -71,6 +71,13 @@
 .сustomerData {
     width: 50%;
     height: 100%;
+    /* padding-top: 20px; */
+
+    display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        /* gap: 20px; */
 
     outline: 1px solid blue;
 }
@@ -111,6 +118,7 @@
 
 
 .submitButton {
+    display: none;
     /* margin-top: 10px; */
     /* align-self: flex-end; */
     width: 100px;

@@ -1,6 +1,7 @@
 // import { useState } from "react";
 import { ShoppingCartOrder } from 'components/ShoppingCartOrder/ShoppingCartOrder';
 // import { TotalPrice } from 'components/TotalPrice/TotalPrice';
+import { CustomerDataForm } from 'components/CustomerDataForm/CustomerDataForm';
 
 import css from './ShoppingCart.module.css';
 
@@ -38,10 +39,11 @@ export const ShoppingCart = () => {
         <div className={css.shoppingCartContainer}>
             <div className={css.shoppingCartTaskContainer}>
                 <div className={css.сustomerData}>
-                    Shopping Cart Customer Data
+                    {/* //* --- Shopping Cart Customer Data ----- */}
+                    <CustomerDataForm />
                 </div>
                 <div className={css.CustomerOrder}>
-                    {/* Shopping Cart Customer Order */}
+                    {/* //* --- Shopping Cart Customer Order ----- */}
                     <ShoppingCartOrder />
                 </div>
             </div>
