@@ -6,7 +6,7 @@ import css from './History.module.css';
 export const History = () => {
     //! Чтение массива объектов с данными заказчика --> customerDataLocalStorage
     let customerDataLocalStorage = JSON.parse(localStorage.getItem("customerData"));
-    console.log("CustomerDataForm-->customerDataLocalStorage:", customerDataLocalStorage);
+    console.log("History-->customerDataLocalStorage:", customerDataLocalStorage);
 
     if (!customerDataLocalStorage) {
         const customerData = {
@@ -16,11 +16,32 @@ export const History = () => {
             address: "",
         };
         localStorage.setItem("customerData", JSON.stringify(customerData));
-        console.log("CustomerDataForm-->IF:", customerData); //!
+        console.log("History-->IF:", customerData); //!
         customerDataLocalStorage = JSON.parse(localStorage.getItem("customerData"));
     };
 
+
+    //! Чтение массива объектов с заказанными пиццами --> allChoicePizzasLocalStorage
+    const allChoicePizzasLocalStorage = JSON.parse(localStorage.getItem("allChoicePizzas"));
+    console.log("History-->allChoicePizzasLocalStorage:", allChoicePizzasLocalStorage);
+
+    //! Подсчет общей суммы
+    let totalPrice = 0;
+    let totalPizzas = 0;
+    if (allChoicePizzasLocalStorage) {
+        totalPizzas = allChoicePizzasLocalStorage.reduce((total, item) => {
+            total = total + item.quantity;
+            return total;
+        }, 0);
+        totalPrice = allChoicePizzasLocalStorage.reduce((total, item) => {
+            total = total + item.price * item.quantity;
+            return total;
+        }, 0);
+    };
+    console.log("History-->totalPizzas:", totalPizzas); //!
+    console.log("History-->totalPrice:", totalPrice); //!
     
+
 
 
     return (
@@ -28,14 +49,18 @@ export const History = () => {
                 <div className={css.historyData}>
                     <p>You Data</p>
                     <br />
-                    <p>You Name: {customerDataLocalStorage.name }</p>
-                    <p>You Email: {customerDataLocalStorage.email }</p>
-                    <p>You Phone: {customerDataLocalStorage.phone }</p>
-                    <p>You Address: {customerDataLocalStorage.address }</p>
+                    <p>You Name: {customerDataLocalStorage.name}</p>
+                    <p>You Email: {customerDataLocalStorage.email}</p>
+                    <p>You Phone: {customerDataLocalStorage.phone}</p>
+                    <p>You Address: {customerDataLocalStorage.address}</p>
                 </div>
                 
                 <div className={css.historyOrder}>
                     <p>You Order</p>
+                    <br />
+                    <p>Pizza varieties: {allChoicePizzasLocalStorage ? allChoicePizzasLocalStorage.length : 0}</p>
+                    <p>Total pizzas: {totalPizzas}</p>
+                    <p>TOTAL: {totalPrice} грн.</p>
                 </div>
             {/* //* --- Кнопка Переход на страницу Shopping Cart: ----- */}
             <NavLink className={css.linkButton} to="/cart">Change</NavLink>
