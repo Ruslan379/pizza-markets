@@ -2,11 +2,10 @@ import { NavLink } from 'react-router-dom';
 import css from './History.module.css';
 
 
-//------------------------------------------------------
+
 export const History = () => {
-    //! Чтение массива объектов с данными заказчика --> customerDataLocalStorage
+
     let customerDataLocalStorage = JSON.parse(localStorage.getItem("customerData"));
-    console.log("History-->customerDataLocalStorage:", customerDataLocalStorage);
 
     if (!customerDataLocalStorage) {
         const customerData = {
@@ -16,14 +15,11 @@ export const History = () => {
             address: "",
         };
         localStorage.setItem("customerData", JSON.stringify(customerData));
-        console.log("History-->IF:", customerData); //!
         customerDataLocalStorage = JSON.parse(localStorage.getItem("customerData"));
     };
 
 
-    //! Чтение массива объектов с заказанными пиццами --> allChoicePizzasLocalStorage
     const allChoicePizzasLocalStorage = JSON.parse(localStorage.getItem("allChoicePizzas"));
-    console.log("History-->allChoicePizzasLocalStorage:", allChoicePizzasLocalStorage);
 
     //! Подсчет общей суммы
     let totalPrice = 0;
@@ -38,9 +34,7 @@ export const History = () => {
             return total;
         }, 0);
     };
-    console.log("History-->totalPizzas:", totalPizzas); //!
-    console.log("History-->totalPrice:", totalPrice); //!
-    
+
 
 
 
@@ -62,7 +56,6 @@ export const History = () => {
                     <p>Total pizzas: {totalPizzas}</p>
                     <p>TOTAL: {totalPrice} грн.</p>
                 </div>
-            {/* //* --- Кнопка Переход на страницу Shopping Cart: ----- */}
             <NavLink className={css.linkButton} to="/cart">Change</NavLink>
         </div>
     );

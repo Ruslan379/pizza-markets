@@ -1,4 +1,4 @@
-// import pizzaMarkets from "db/pizzaMarkets.json";
+
 import imagePizza from "images/monopizza_pica-dyabola.jpg";
 
 
@@ -8,12 +8,6 @@ import css from "./Pizzas.module.css";
 
 //------------------------------------------------------
 export const Pizzas = ({ allPizzas, addPizzaToCard }) => {
-    console.log("Pizzas-->allPizzas:", allPizzas);
-
-
-    // const addPizzaToCard = pizza => {
-    //     console.log("Pizzas-->pizza:", pizza);
-    // }
 
 
     return (
@@ -43,7 +37,6 @@ export const Pizzas = ({ allPizzas, addPizzaToCard }) => {
                     >
                         add to Card
                     </button>
-
                 </li>
             ))}
         </ul>
