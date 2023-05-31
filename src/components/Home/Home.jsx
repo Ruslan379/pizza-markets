@@ -1,9 +1,9 @@
-import { useState } from "react";
-import { useSelector } from "react-redux";
+import { useState } from "react"; 
+import { useSelector } from "react-redux"; //!!!
 
 import { selectallMarkets } from 'redux/market/marketSelectors';
 
-// import pizzaMarkets from "db/pizzaMarkets.json"; //*
+// import pizzaMarkets from "db/pizzaMarkets.json"; //!!!
 
 import { Shops } from 'components/Shops/Shops';
 import { Pizzas } from 'components/Pizzas/Pizzas';
@@ -19,7 +19,7 @@ export const Home = () => {
     const [allPizzas, setaAlPizzas] = useState([]);
     const [allChoicePizzas, setAllChoicePizzas] = useState(allChoicePizzasLocalStorage || []);
 
-    //*
+    //!!!
     const pizzaMarkets = useSelector(selectallMarkets);
     console.log("Home ==> pizzaMarkets:", pizzaMarkets); //!
 
@@ -28,7 +28,7 @@ export const Home = () => {
         setaAlPizzas(selectShopPizzas.pizzas);
     };
 
-    const addPizzaToCard = pizza => {
+    const addPizzaToCart = pizza => {
         const findIndexPizza = allChoicePizzas.findIndex(item => item.pizza === pizza.pizza);
         if (findIndexPizza === -1) {
             const pizzaAndQuantity = {
@@ -63,7 +63,7 @@ export const Home = () => {
                     (
                         <Pizzas
                         allPizzas={allPizzas}
-                        addPizzaToCard={addPizzaToCard}
+                        addPizzaToCart={addPizzaToCart}
                         />
                     )
                     :

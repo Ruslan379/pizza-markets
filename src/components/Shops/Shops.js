@@ -7,7 +7,7 @@ import css from "./Shops.module.css";
 
 
 
-// export const Shops = ({ pizzaMarkets, selectShop }) => {
+// export const Shops = ({ pizzaMarkets, selectShop }) => { 
 export const Shops = ({ selectShop }) => {
     const pizzaMarkets = useSelector(selectallMarkets);
     console.log("Shops ==> pizzaMarkets:", pizzaMarkets); //!
