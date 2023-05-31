@@ -112,6 +112,14 @@
  * LICENSE file in the root directory of this source tree.
  */
 
-//! Redux Toolkit 
+//!
+
+//! 2-й вариант
+
+//! GET @ /markets
+
+//! axios defaults baseURL (возможно, это не надо, т.к. уже есть в authOperations.js)
 
 //! Подсчет общей суммы
+
+//!!! POST @ /transactions
