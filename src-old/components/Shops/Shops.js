@@ -1,6 +1,5 @@
 import css from "./Shops.module.css";
 
-
 export const Shops = ({ pizzaMarkets, selectShop }) => {
     return (
         <>

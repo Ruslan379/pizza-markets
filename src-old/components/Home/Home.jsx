@@ -5,8 +5,6 @@ import pizzaMarkets from "db/pizzaMarkets.json";
 import { Shops } from 'components/Shops/Shops';
 import { Pizzas } from 'components/Pizzas/Pizzas';
 
-import imageBackgroundPizza from "images/A48382B1BEBB8CBDB0-large.webp";
-
 import css from './Home.module.css';
 
 
@@ -51,26 +49,10 @@ export const Home = () => {
                 />
             </div>
             <div className={css.pizzas}>
-                {allPizzas.length > 0
-                    ?
-                    (
-                        <Pizzas
-                        allPizzas={allPizzas}
-                        addPizzaToCard={addPizzaToCard}
-                        />
-                    )
-                    :
-                    (
-                        <div className={css.imagePizzaContainer}>
-                            <img
-                                className={css.imageBackgroundPizza}
-                                alt={"Background Pizza"}
-                                src={imageBackgroundPizza}
-                                width="100%"
-                            />
-                        </div>
-                    
-                )}
+                <Pizzas
+                    allPizzas={allPizzas}
+                    addPizzaToCard={addPizzaToCard}
+                />
             </div>
         </div>
     );

@@ -1,10 +1,15 @@
+
 import imagePizza from "images/monopizza_pica-dyabola.jpg";
+
 
 import css from "./Pizzas.module.css";
 
 
 
+//------------------------------------------------------
 export const Pizzas = ({ allPizzas, addPizzaToCard }) => {
+
+
     return (
         <ul className={css.list}>
             {allPizzas.map((item, index) => (
@@ -14,7 +19,7 @@ export const Pizzas = ({ allPizzas, addPizzaToCard }) => {
                 >
                     <img
                         className={css.imagePizza}
-                        alt={"Pizza"}
+                        alt={imagePizza}
                         src={imagePizza}
                         width="100%"
                     />

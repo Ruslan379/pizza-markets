@@ -31,9 +31,9 @@ export const ShoppingCartOrder = () => {
                         >
                             <img
                                 className={css.imagePizza}
-                                alt={"Pizza"}
+                                alt={imagePizza}
                                 src={imagePizza}
-                                width="100%"
+                                width="50%"
                             />
                             <div className={css.cardContents}>
                                 <p className={css.namePizza}>"{item.pizza}"</p>
@@ -52,6 +52,7 @@ export const ShoppingCartOrder = () => {
                                             localStorage.setItem("allChoicePizzas", JSON.stringify([...allChoicePizzasLocalStorage]));
                                         }}
                                     />
+
                                 </div>
                             </div>
                         </li>
