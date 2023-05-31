@@ -20,13 +20,13 @@ export const getAllMarkets = createAsyncThunk(
     async (_, thunkAPI) => {
         try {
             const { data } = await axios.get('/markets'); //?  //??
-            // console.log("contacts/fetchAll==>data:", data); //! //??
-            // const { data: { contacts } } = await axios.get('/markets'); //???
-            // const { contacts } = data; //??  //???
+            // console.log("markets/getAllMarkets==>data:", data); //! //??
+            // const { data: { markets } } = await axios.get('/markets'); //???
+            // const { markets } = data; //??  //???
             console.log("markets/getAllMarkets == >data.markets:", data.markets); //!
             return data.markets; //?
-            // return data.contacts; //??
-            // return contacts; //??  //???
+            // return data; //??
+            // return markets; //??  //???
         } catch (error) {
             console.log(error); //!
             toast.error(`Ошибка запроса: ${error.message === "Request failed with status code 404" ? "Нет такой коллекции пользователей" : error.message}`, { position: "top-center", autoClose: 2000 });
