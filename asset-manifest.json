@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/pizza-markets/static/css/main.084aa09f.css",
-    "main.js": "/pizza-markets/static/js/main.a1c97d26.js",
+    "main.js": "/pizza-markets/static/js/main.a59d4437.js",
     "static/media/monopizza_pica-dyabola.jpg": "/pizza-markets/static/media/monopizza_pica-dyabola.cdbb5c0621040dc1eb7b.jpg",
     "static/media/-large.webp": "/pizza-markets/static/media/A48382B1BEBB8CBDB0-large.467687a4c4cc774c90cc.webp",
     "index.html": "/pizza-markets/index.html",
     "main.084aa09f.css.map": "/pizza-markets/static/css/main.084aa09f.css.map",
-    "main.a1c97d26.js.map": "/pizza-markets/static/js/main.a1c97d26.js.map"
+    "main.a59d4437.js.map": "/pizza-markets/static/js/main.a59d4437.js.map"
   },
   "entrypoints": [
     "static/css/main.084aa09f.css",
-    "static/js/main.a1c97d26.js"
+    "static/js/main.a59d4437.js"
   ]
 }
