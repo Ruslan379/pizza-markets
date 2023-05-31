@@ -1,7 +1,11 @@
+import { useEffect } from 'react';
+import { useDispatch } from 'react-redux';
 import {
   Route,
   Routes,
 } from 'react-router-dom';
+
+import { getAllMarkets } from 'redux/market/marketOperations';
 
 import { SharedLayout } from 'components/SharedLayout/SharedLayout';
 import { NotFound } from "page/NotFound";
@@ -11,6 +15,14 @@ import { History } from 'components/History/History';
 
 
 export const App = () => {
+  const dispatch = useDispatch();
+  // const { isLoading } = useAuth();
+
+    useEffect(() => {
+        dispatch(getAllMarkets());
+    }, [dispatch]);
+
+    // console.log("App ==> isLoading:", isLoading); //!
 
   return (
     <Routes>
