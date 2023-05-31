@@ -1,6 +1,8 @@
 import { useState } from "react"; 
 import { useSelector } from "react-redux"; //!!!
 
+import { toast } from 'react-toastify';
+
 import { selectallMarkets } from 'redux/market/marketSelectors';
 
 // import pizzaMarkets from "db/pizzaMarkets.json"; //!!!
@@ -29,6 +31,9 @@ export const Home = () => {
     };
 
     const addPizzaToCart = pizza => {
+        // console.log("pizza:", pizza); //!
+        // console.log("pizza.pizza:", pizza.pizza); //!
+
         const findIndexPizza = allChoicePizzas.findIndex(item => item.pizza === pizza.pizza);
         if (findIndexPizza === -1) {
             const pizzaAndQuantity = {
@@ -38,7 +43,6 @@ export const Home = () => {
             setAllChoicePizzas([...allChoicePizzas, pizzaAndQuantity]);
             localStorage.setItem("allChoicePizzas", JSON.stringify([...allChoicePizzas, pizzaAndQuantity]));
         } else {
-
             allChoicePizzas.map((item, index) => {
                 if (index === findIndexPizza) item.quantity = item.quantity + 1;
                 return allChoicePizzas
@@ -46,6 +50,8 @@ export const Home = () => {
             setAllChoicePizzas([...allChoicePizzas]);
             localStorage.setItem("allChoicePizzas", JSON.stringify([...allChoicePizzas]));
         }
+        // console.log(`Pizza "${pizza.pizza}" has been added to your shopping cart`); //!
+        toast.success(`Pizza "${pizza.pizza}" has been added to your shopping cart`, { theme: "colored", position: "top-center", autoClose: 2000 });
     }
 
 

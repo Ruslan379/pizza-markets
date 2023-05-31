@@ -5,6 +5,9 @@ import {
   Routes,
 } from 'react-router-dom';
 
+import { ToastContainer } from 'react-toastify';
+  import 'react-toastify/dist/ReactToastify.css';
+
 import { getAllMarkets } from 'redux/market/marketOperations'; //!!!
 
 import { SharedLayout } from 'components/SharedLayout/SharedLayout';
@@ -25,14 +28,16 @@ export const App = () => {
     // console.log("App ==> isLoading:", isLoading); //!!!
 
   return (
-    <Routes>
-      <Route path="*" element={<NotFound />} />
-      <Route path="/" element={<SharedLayout />} >
-        <Route index element={<Home />} />
-        <Route path="/cart" element={<ShoppingCart />} ></Route>
-        <Route path="/history" element={<History/>} ></Route>
-      </Route> 
-    </Routes>
-  
+    <>
+      <Routes>
+        <Route path="*" element={<NotFound />} />
+        <Route path="/" element={<SharedLayout />} >
+          <Route index element={<Home />} />
+          <Route path="/cart" element={<ShoppingCart />} ></Route>
+          <Route path="/history" element={<History/>} ></Route>
+        </Route> 
+      </Routes>
+      <ToastContainer />  
+  </>
   );
 };
