@@ -1,26 +1,21 @@
 import { NavLink } from 'react-router-dom';
+import { useNavigate } from "react-router-dom";
 import css from './History.module.css';
 
 
 
 export const History = () => {
-
     const customerDataLocalStorage = JSON.parse(localStorage.getItem("customerData"));
-
-
-    // if (!customerDataLocalStorage) {
-    //     const customerData = {
-    //         name: "",
-    //         email: "",
-    //         phone: "",
-    //         address: "",
-    //     };
-    //     localStorage.setItem("customerData", JSON.stringify(customerData));
-    //     customerDataLocalStorage = JSON.parse(localStorage.getItem("customerData"));
-    // };
-
-
     const allChoicePizzasLocalStorage = JSON.parse(localStorage.getItem("allChoicePizzas"));
+
+    const navigate = useNavigate();
+
+    const completionOfTheOrder = () => {
+        localStorage.removeItem("customerData");
+        localStorage.removeItem("allChoicePizzas");
+        navigate("/", { replace: true });
+    }
+
 
     //! Подсчет общей суммы
     let totalPrice = 0;
@@ -42,7 +37,7 @@ export const History = () => {
     return (
         <div className={css.orderHistoryContainer}>
             <div className={css.historyData}>
-                {customerDataLocalStorage.name
+                {(customerDataLocalStorage && customerDataLocalStorage.name)
                     ?
                     (
                         <>
@@ -92,8 +87,15 @@ export const History = () => {
             </div>
             <div className={css.buttonContainer}>
                 <NavLink className={css.linkButton} to="/cart">Change</NavLink>
-                {customerDataLocalStorage.name && allChoicePizzasLocalStorage && (
-                    <NavLink className={css.linkButton} to="/order">Сonfirm</NavLink>
+                {customerDataLocalStorage && customerDataLocalStorage.name && allChoicePizzasLocalStorage && (
+                    // <NavLink className={css.linkButton} to="/order">Сonfirm</NavLink>
+                    <button
+                        className={css.linkButton}
+                        type="button"
+                        onClick={completionOfTheOrder}
+                    >
+                        Сonfirm
+                    </button>
                 )}
             </div>
         </div>
