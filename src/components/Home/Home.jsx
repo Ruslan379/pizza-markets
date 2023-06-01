@@ -50,7 +50,6 @@ export const Home = () => {
             setAllChoicePizzas([...allChoicePizzas]);
             localStorage.setItem("allChoicePizzas", JSON.stringify([...allChoicePizzas]));
         }
-        // console.log(`Pizza "${pizza.pizza}" has been added to your shopping cart`); //!
         toast.success(`Pizza "${pizza.pizza}" has been added to your shopping cart`, { theme: "colored", position: "top-center", autoClose: 2000 });
     }
 

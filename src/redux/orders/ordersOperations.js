@@ -35,19 +35,19 @@ export const getAllMarkets = createAsyncThunk(
 
 
 //! POST @ /contacts
-export const addContact = createAsyncThunk(
-    'contacts/addContact',
+export const createOrder = createAsyncThunk(
+    'order/createOrder',
     // async ({ name, number }, thunkAPI) => {
-    async ({ name, phone }, thunkAPI) => {
+    async (orderConfirmed, thunkAPI) => {
         try {
-            console.log("contacts/addContact==>name:", name); //! 
-            console.log("contacts/addContact==>phone:", phone); //! 
-            // const { data } = await axios.post('/contacts', { name, number });
-            const { data } = await axios.post('/contacts', { name, phone });
-            console.log("contacts/addContact ==> data:", data); //!
-            console.log("contacts/addContact ==> data.contact:", data.contact); //!
-            // return data; //??
-            return data.contact;
+            console.log("order/createOrder==>orderConfirmed:", orderConfirmed); //! 
+            // console.log("contacts/addContact==>phone:", phone); //! 
+            // const { data } = await axios.post('/orders', orderConfirmed);
+            const { data } = await axios.post('/orders', orderConfirmed);
+            // console.log("contacts/addContact ==> data:", data); //!
+            // console.log("contacts/addContact ==> data.contact:", data.contact); //!
+            return data; //??
+            // return data.contact;
         } catch (error) {
             console.log(error); //!
             toast.error(`Ошибка запроса: ${error.message === "Request failed with status code 400" ? "Ошибка при создании контакта" : error.message}`, { position: "top-center", autoClose: 2000 });

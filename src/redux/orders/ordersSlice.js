@@ -8,7 +8,7 @@ import {
     fetchContactsFromMmockapiIo,
     deleteContactFromMmockapiIo
     // AddUploadContacts
-} from './contactsOperations';
+} from './ordersOperations';
 
 
 
