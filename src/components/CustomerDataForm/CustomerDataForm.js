@@ -7,6 +7,7 @@ import css from './CustomerDataForm.module.css';
 export const CustomerDataForm = () => {
     const navigate = useNavigate();
     let customerDataLocalStorage = JSON.parse(localStorage.getItem("customerData"));
+    const allChoicePizzasLocalStorage = JSON.parse(localStorage.getItem("allChoicePizzas"));
 
     if (!customerDataLocalStorage) {
         const customerData = {
@@ -85,7 +86,21 @@ export const CustomerDataForm = () => {
                         defaultValue={customerDataLocalStorage.address}
                     />
                 </label>
-                <button className={css.submitButtonForm} type="submit">Submit</button>
+                <button
+                    className={
+                        `${allChoicePizzasLocalStorage
+                            ?
+                            `${css.submitButtonForm}`
+                            :
+                            `${css.submitButtonForm} ${css.submitButtonFormOpacity}`
+                        }
+                        `
+                    }
+                    type="submit"
+                    disabled={!allChoicePizzasLocalStorage}
+                >
+                    Submit
+                </button>
             </form>
         </>
     );
