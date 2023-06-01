@@ -1,13 +1,8 @@
 import { createSlice } from '@reduxjs/toolkit';
 import { logOut } from 'redux/auth/authOperations';
 import {
-    fetchContacts,
-    addContact,
-    deleteContact,
-    editContact,
-    fetchContactsFromMmockapiIo,
-    deleteContactFromMmockapiIo
-    // AddUploadContacts
+    getAllOrders,
+    addOrder
 } from './ordersOperations';
 
 
@@ -25,12 +20,9 @@ const handleRejected = (state, { payload }) => {
 
 
 const contactsSlice = createSlice({
-    name: 'contacts',
+    name: 'orders',
     initialState: {
-        items: [],
-        isLoading: false,
-        error: null,
-        uploadContacts: []
+        orders: [],
     },
     extraReducers: {
         [fetchContacts.pending]: handlePending,

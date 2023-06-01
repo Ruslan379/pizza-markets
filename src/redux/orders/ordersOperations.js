@@ -44,7 +44,7 @@ export const addOrder = createAsyncThunk(
             console.log("orders/addOrder ==> orderConfirmed:", orderConfirmed); //!
             // const { data: { order } } = await axios.get('/orders');
             const { data } = await axios.post('/orders', orderConfirmed);
-            // console.log("orders/addOrder == >data:", data); //!
+            console.log("orders/addOrder == >data:", data); //!
             // console.log("orders/addOrder ==> data.order:", data.order); //!
             // const { order } = data;
             // console.log("orders/addOrder ==> order:", order); //!
