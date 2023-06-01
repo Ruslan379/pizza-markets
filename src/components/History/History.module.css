@@ -52,13 +52,6 @@
     color: rgb(150, 0, 0);
 }
 
-.buttonContainer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-}
-
 .historyOrder {
     width: 100%;
     height: 50%;
@@ -70,6 +63,15 @@
     border: 2px solid rgb(255, 203, 223);
         border-radius: 8px;
     box-shadow: 12px 12px 18px rgba(59, 43, 14, 0.23);
+    /* outline: 1px solid blue; */
+}
+
+.buttonContainer {
+    width: 100%;
+    display: flex;
+        justify-content: center;
+        justify-content: space-evenly;
+        align-items: center;
     /* outline: 1px solid blue; */
 }
 
