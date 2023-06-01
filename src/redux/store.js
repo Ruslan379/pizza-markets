@@ -1,7 +1,8 @@
 //! Redux Toolkit 
 import { configureStore } from "@reduxjs/toolkit";
 
-import { marketsPizzasReduser } from 'redux/market/marketSlice';
+import { marketsPizzasReduser } from 'redux/market/marketSlice.js';
+import { ordersReducer } from 'redux/orders/ordersSlice.js';
 
 
 
@@ -9,8 +10,7 @@ import { marketsPizzasReduser } from 'redux/market/marketSlice';
 export const store = configureStore({
     reducer: {
         marketPizzas: marketsPizzasReduser,
-        // customerData: customerDataReduser,
-        // customerOrder: customerOrderReduser,
+        customerOrder: ordersReducer,
     },
 });
 
