@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/pizza-markets/static/css/main.37dd27fc.css",
-    "main.js": "/pizza-markets/static/js/main.85995b1a.js",
+    "main.css": "/pizza-markets/static/css/main.5e4edc78.css",
+    "main.js": "/pizza-markets/static/js/main.c705fd92.js",
     "static/media/-large.webp": "/pizza-markets/static/media/A48382B1BEBB8CBDB0-large.467687a4c4cc774c90cc.webp",
     "index.html": "/pizza-markets/index.html",
-    "main.37dd27fc.css.map": "/pizza-markets/static/css/main.37dd27fc.css.map",
-    "main.85995b1a.js.map": "/pizza-markets/static/js/main.85995b1a.js.map"
+    "main.5e4edc78.css.map": "/pizza-markets/static/css/main.5e4edc78.css.map",
+    "main.c705fd92.js.map": "/pizza-markets/static/js/main.c705fd92.js.map"
   },
   "entrypoints": [
-    "static/css/main.37dd27fc.css",
-    "static/js/main.85995b1a.js"
+    "static/css/main.5e4edc78.css",
+    "static/js/main.c705fd92.js"
   ]
 }
