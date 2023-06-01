@@ -114,9 +114,13 @@
 
 //!
 
+//! 
+
 //! 2-й вариант
 
 //! GET @ /markets
+
+//! POST @ /contacts
 
 //! axios defaults baseURL (возможно, это не надо, т.к. уже есть в authOperations.js)
 
