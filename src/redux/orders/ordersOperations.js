@@ -42,15 +42,15 @@ export const addOrder = createAsyncThunk(
     async (orderConfirmed, thunkAPI) => {
         try {
             console.log("orders/addOrder ==> orderConfirmed:", orderConfirmed); //!
-            // const { data: { order } } = await axios.get('/orders');
-            const { data } = await axios.post('/orders', orderConfirmed);
-            console.log("orders/addOrder == >data:", data); //!
+            const { data: { order } } = await axios.post('/orders', orderConfirmed);
+            // const { data } = await axios.post('/orders', orderConfirmed);
+            // console.log("orders/addOrder == >data:", data); //!
             // console.log("orders/addOrder ==> data.order:", data.order); //!
             // const { order } = data;
-            // console.log("orders/addOrder ==> order:", order); //!
-            return data;
+            console.log("orders/addOrder ==> order:", order); //!
+            // return data;
             // return data.order;
-            // return order;
+            return order;
         } catch (error) {
             console.log(error); //!
             toast.error(`Ошибка запроса: ${error.message === "Request failed with status code 400" ? "Ошибка при создании контакта" : error.message}`, { position: "top-center", autoClose: 2000 });

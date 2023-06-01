@@ -22,7 +22,7 @@ export const History = () => {
         // console.log("History-->allChoicePizzasLocalStorage:", allChoicePizzasLocalStorage) //!
         const confirmedOrder = {
             ...customerDataLocalStorage,
-            oder: allChoicePizzasLocalStorage,
+            order: allChoicePizzasLocalStorage,
             total: totalPrice
         };
         // console.log("History-->confirmedOrder:", confirmedOrder) //!
