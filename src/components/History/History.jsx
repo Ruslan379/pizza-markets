@@ -13,7 +13,7 @@ export const History = () => {
     const completionOfTheOrder = () => {
         localStorage.removeItem("customerData");
         localStorage.removeItem("allChoicePizzas");
-        navigate("/", { replace: true });
+        navigate("/order", { replace: true });
     }
 
 
