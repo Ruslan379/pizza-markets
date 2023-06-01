@@ -69,6 +69,10 @@
         border: 1px solid rgb(71, 181, 255);
     }
 
+    .submitButtonFormOpacity {
+        opacity: 0.3;
+    }
+
     .submitButtonForm {
         position: absolute;
         bottom: 33px;
@@ -111,6 +115,10 @@
             background-color: rgb(236, 247, 255);
             border-radius: 5px;
             border: 1px solid rgb(71, 181, 255);
+        }
+
+        .submitButtonFormOpacity {
+            opacity: 0.3;
         }
     
         .submitButtonForm {
