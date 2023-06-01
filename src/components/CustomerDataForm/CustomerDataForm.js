@@ -1,7 +1,7 @@
 import { useNavigate } from "react-router-dom";
-import { useDispatch } from 'react-redux'; //!!!
+// import { useDispatch } from 'react-redux';  //! не здесь
 
-import { createOrder } from 'redux/orders/ordersOperations'; //!!!
+// import { createOrder } from 'redux/orders/ordersOperations'; //! не здесь
 
 import css from './CustomerDataForm.module.css';
 
@@ -10,7 +10,7 @@ import css from './CustomerDataForm.module.css';
 
 export const CustomerDataForm = () => {
     const navigate = useNavigate();
-    const dispatch = useDispatch();
+    // const dispatch = useDispatch(); //! не здесь
 
     let customerDataLocalStorage = JSON.parse(localStorage.getItem("customerData"));
     const allChoicePizzasLocalStorage = JSON.parse(localStorage.getItem("allChoicePizzas"));
@@ -36,12 +36,13 @@ export const CustomerDataForm = () => {
             address: form.elements.address.value,
         };
         localStorage.setItem("customerData", JSON.stringify(customerData));
-        console.log("CustomerDataForm-->customerData:", customerData) //!
-        console.log("CustomerDataForm-->allChoicePizzasLocalStorage:", allChoicePizzasLocalStorage) //!
 
-        const confirmedOrder = { ...customerData, oder: allChoicePizzasLocalStorage };
-        console.log("CustomerDataForm-->confirmedOrder:", confirmedOrder) //!
-        dispatch(createOrder(confirmedOrder));
+        //! Запрос в БД на добавление заказа (не здесь)
+        // console.log("CustomerDataForm-->customerData:", customerData) //!
+        // console.log("CustomerDataForm-->allChoicePizzasLocalStorage:", allChoicePizzasLocalStorage) //!
+        // const confirmedOrder = { ...customerData, oder: allChoicePizzasLocalStorage };
+        // console.log("CustomerDataForm-->confirmedOrder:", confirmedOrder) //!
+        // dispatch(createOrder(confirmedOrder));
 
         form.reset();
         navigate("/history", { replace: true });

@@ -1,16 +1,33 @@
 import { NavLink } from 'react-router-dom';
 import { useNavigate } from "react-router-dom";
+import { useDispatch } from 'react-redux'; //!!!
+
+import { addOrder } from 'redux/orders/ordersOperations';
+
 import css from './History.module.css';
 
 
 
+
 export const History = () => {
+    const dispatch = useDispatch();
+    const navigate = useNavigate();
+
     const customerDataLocalStorage = JSON.parse(localStorage.getItem("customerData"));
     const allChoicePizzasLocalStorage = JSON.parse(localStorage.getItem("allChoicePizzas"));
 
-    const navigate = useNavigate();
-
-    const completionOfTheOrder = () => {
+    //! Добавление заказа в БД
+    const completionOfTheOrder = totalPrice => {
+        // console.log("History-->customerDataLocalStorage:", customerDataLocalStorage) //!
+        // console.log("History-->allChoicePizzasLocalStorage:", allChoicePizzasLocalStorage) //!
+        const confirmedOrder = {
+            ...customerDataLocalStorage,
+            oder: allChoicePizzasLocalStorage,
+            total: totalPrice
+        };
+        // console.log("History-->confirmedOrder:", confirmedOrder) //!
+        dispatch(addOrder(confirmedOrder));
+        //! Очистка localStorage
         localStorage.removeItem("customerData");
         localStorage.removeItem("allChoicePizzas");
         navigate("/order", { replace: true });
@@ -92,7 +109,7 @@ export const History = () => {
                     <button
                         className={css.linkButton}
                         type="button"
-                        onClick={completionOfTheOrder}
+                        onClick={() => completionOfTheOrder(totalPrice)}
                     >
                         Сonfirm
                     </button>
