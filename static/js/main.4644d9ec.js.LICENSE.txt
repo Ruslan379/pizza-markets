@@ -114,14 +114,14 @@
 
 //!
 
-//! 
-
-//! 2-й вариант
-
 //! GET @ /markets
 
-//! POST @ /contacts
+//! GET @ /order
+
+//! POST @ /orders
 
 //! axios defaults baseURL (возможно, это не надо, т.к. уже есть в authOperations.js)
 
-//!!! POST @ /transactions
+//! Запрос в БД на добавление заказа (не здесь)
+
+//! Очистка localStorage
