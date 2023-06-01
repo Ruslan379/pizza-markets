@@ -56,7 +56,10 @@ export const History = () => {
                 <p className={css.textKey}>Total pizzas: <span className={css.textValue}>{totalPizzas}</span></p>
                 <p className={css.textKey}>TOTAL: <span className={css.textValue}>{totalPrice} грн.</span></p>
             </div>
-            <NavLink className={css.linkButton} to="/cart">Change</NavLink>
+            <div className={css.buttonContainer}>
+                <NavLink className={css.linkButton} to="/cart">Change</NavLink>
+                <NavLink className={css.linkButton} to="/order">Сonfirm</NavLink>
+            </div>
         </div>
     );
 };
