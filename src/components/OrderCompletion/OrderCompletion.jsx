@@ -27,14 +27,14 @@ export const OrderCompletion = () => {
             <div className={css.textContainer}>
                 <p className={css.header}
                 >Thank you,
-                    <span className={`${css.header} ${css.headerData}`}> {lastOrder.name}</span>
+                    <span className={`${css.header} ${css.headerData}`}> {lastOrder ? lastOrder.name : "NAME"}</span>
                     !
                 </p>
                 <p className={css.header}>Your order
-                    <span className={`${css.header} ${css.headerData}`}> {lastOrderNumber} </span>
+                    <span className={`${css.header} ${css.headerData}`}> {lastOrderNumber ? lastOrderNumber : "NUMBER"} </span>
                     has been accepted and will be delivered to you at:
                     <br />
-                    <span className={`${css.header} ${css.headerData}`}>{lastOrder.address}</span>
+                    <span className={`${css.header} ${css.headerData}`}>{lastOrder ? lastOrder.address : "ADDRESS" }</span>
                 </p>
             </div>
             <NavLink className={css.linkButton} to="/">Go Shop</NavLink>
