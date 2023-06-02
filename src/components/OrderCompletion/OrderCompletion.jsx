@@ -1,7 +1,5 @@
-// import { useState } from "react";
 import { NavLink } from 'react-router-dom';
 import { useSelector } from "react-redux";
-
 
 import { selectAllOrders, selectLastOrderNumber } from 'redux/orders/ordersSelectors';
 
@@ -27,8 +25,17 @@ export const OrderCompletion = () => {
     return (
         <div className={css.orderCompletionContainer}>
             <div className={css.textContainer}>
-                <p className={css.header}>Thank you, {lastOrder.name}!</p>
-                <p className={css.header}>Your order {lastOrderNumber} has been accepted and will be delivered to you at: <br/>{lastOrder.address} </p>
+                <p className={css.header}
+                >Thank you,
+                    <span className={`${css.header} ${css.headerData}`}> {lastOrder.name}</span>
+                    !
+                </p>
+                <p className={css.header}>Your order
+                    <span className={`${css.header} ${css.headerData}`}> {lastOrderNumber} </span>
+                    has been accepted and will be delivered to you at:
+                    <br />
+                    <span className={`${css.header} ${css.headerData}`}>{lastOrder.address}</span>
+                </p>
             </div>
             <NavLink className={css.linkButton} to="/">Go Shop</NavLink>
         </div>
