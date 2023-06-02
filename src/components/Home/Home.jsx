@@ -10,6 +10,8 @@ import { selectLoadingMarkets, selectAllMarkets } from 'redux/market/marketSelec
 import { Shops } from 'components/Shops/Shops';
 import { Pizzas } from 'components/Pizzas/Pizzas';
 
+import { Loader } from 'components/Loader/Loader.jsx';
+
 import imageBackgroundPizza from "images/A48382B1BEBB8CBDB0-large.webp";
 
 import css from './Home.module.css';
@@ -22,8 +24,6 @@ export const Home = () => {
     const [allChoicePizzas, setAllChoicePizzas] = useState(allChoicePizzasLocalStorage || []);
 
     const isLoading = useSelector(selectLoadingMarkets);
-    console.log("Home-->isLoading:", isLoading); //!
-
     const pizzaMarkets = useSelector(selectAllMarkets);
     const selectShop = id => {
         const [selectShopPizzas] = pizzaMarkets.filter(pizzaMarket => pizzaMarket._id === id);
@@ -63,6 +63,7 @@ export const Home = () => {
                                 <div className={css.informationText}
                                 >
                                     Please wait, our shops are loading......
+                                    <Loader />
                                 </div>
                             </div>
                         )
