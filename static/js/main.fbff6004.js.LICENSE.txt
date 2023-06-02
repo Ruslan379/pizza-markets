@@ -122,6 +122,4 @@
 
 //! axios defaults baseURL (возможно, это не надо, т.к. уже есть в authOperations.js)
 
-//! Запрос в БД на добавление заказа (не здесь)
-
 //! Очистка localStorage
