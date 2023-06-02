@@ -7,7 +7,6 @@ import css from './CustomerDataForm.module.css';
 
 export const CustomerDataForm = () => {
     const navigate = useNavigate();
-    // const dispatch = useDispatch(); //! не здесь
 
     let customerDataLocalStorage = JSON.parse(localStorage.getItem("customerData"));
     const allChoicePizzasLocalStorage = JSON.parse(localStorage.getItem("allChoicePizzas"));

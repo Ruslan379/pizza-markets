@@ -7,7 +7,6 @@ import css from "./Shops.module.css";
 
 
 
-// export const Shops = ({ pizzaMarkets, selectShop }) => { 
 export const Shops = ({ selectShop }) => {
     const pizzaMarkets = useSelector(selectAllMarkets);
 

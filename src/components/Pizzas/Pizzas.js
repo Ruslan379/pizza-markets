@@ -1,5 +1,3 @@
-// import imagePizza from "images/monopizza_pica-dyabola.jpg"; 
-
 import css from "./Pizzas.module.css";
 
 

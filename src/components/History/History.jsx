@@ -18,14 +18,11 @@ export const History = () => {
 
     //! Добавление заказа в БД
     const completionOfTheOrder = totalPrice => {
-        // console.log("History-->customerDataLocalStorage:", customerDataLocalStorage) //!
-        // console.log("History-->allChoicePizzasLocalStorage:", allChoicePizzasLocalStorage) //!
         const confirmedOrder = {
             ...customerDataLocalStorage,
             order: allChoicePizzasLocalStorage,
             total: totalPrice
         };
-        // console.log("History-->confirmedOrder:", confirmedOrder) //!
         dispatch(addOrder(confirmedOrder));
         //! Очистка localStorage
         localStorage.removeItem("customerData");

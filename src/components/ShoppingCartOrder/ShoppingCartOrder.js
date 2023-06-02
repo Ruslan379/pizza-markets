@@ -1,7 +1,5 @@
 import React, { useState } from 'react';
 
-// import imagePizza from "images/monopizza_pica-dyabola.jpg";
-
 import css from "./ShoppingCartOrder.module.css";
 
 
@@ -82,6 +80,5 @@ export const ShoppingCartOrder = () => {
                 </div>
             )}
         </>
-
     );
 };

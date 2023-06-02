@@ -38,18 +38,11 @@ export const getAllOrders = createAsyncThunk(
 //! POST @ /orders
 export const addOrder = createAsyncThunk(
     'orders/addOrder',
-    // async ({ name, number }, thunkAPI) => {
     async (orderConfirmed, thunkAPI) => {
         try {
-            console.log("orders/addOrder ==> orderConfirmed:", orderConfirmed); //!
+            // console.log("orders/addOrder ==> orderConfirmed:", orderConfirmed); //!
             const { data: { order } } = await axios.post('/orders', orderConfirmed);
-            // const { data } = await axios.post('/orders', orderConfirmed);
-            // console.log("orders/addOrder == >data:", data); //!
-            // console.log("orders/addOrder ==> data.order:", data.order); //!
-            // const { order } = data;
-            console.log("orders/addOrder ==> order:", order); //!
-            // return data;
-            // return data.order;
+            // console.log("orders/addOrder ==> order:", order); //!
             return order;
         } catch (error) {
             console.log(error); //!
@@ -58,26 +51,3 @@ export const addOrder = createAsyncThunk(
         }
     }
 );
-
-
-//? DELETE @ /contacts/:id
-export const deleteContact = createAsyncThunk(
-    'contacts/deleteContact',
-    async (contactId, thunkAPI) => {
-        try {
-            console.log("contacts/deleteContact==>contactId:", contactId); //!
-            await axios.delete(`/contacts/${contactId}`);
-            // const response = await axios.delete(`/contacts/${contactId}`); //!!!  Ошибка Репеты
-            // console.log("deleteContact==>response.data", response.data); //!!!  пустой объект
-            // return response.data; //!!!  Ошибка Репеты
-            return contactId;
-        } catch (error) {
-            console.log(error); //!
-            toast.error(`Ошибка запроса: ${error.message === "Request failed with status code 404" ? "Нет такой коллекции пользователей" : error.message}`, { position: "top-center", autoClose: 2000 });
-            return thunkAPI.rejectWithValue(error.message);
-        }
-    }
-);
-
-
-

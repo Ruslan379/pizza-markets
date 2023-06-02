@@ -20,13 +20,10 @@ import { OrderCompletion } from 'components/OrderCompletion/OrderCompletion';
 
 export const App = () => {
   const dispatch = useDispatch();
-  // const { isLoading } = useAuth(); //!!!
 
     useEffect(() => {
         dispatch(getAllMarkets());
     }, [dispatch]);
-
-    // console.log("App ==> isLoading:", isLoading); //!!!
 
   return (
     <>

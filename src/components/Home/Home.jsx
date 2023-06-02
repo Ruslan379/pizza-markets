@@ -28,8 +28,6 @@ export const Home = () => {
     };
 
     const addPizzaToCart = pizza => {
-        // console.log("pizza:", pizza); //!
-        // console.log("pizza.pizza:", pizza.pizza); //!
 
         const findIndexPizza = allChoicePizzas.findIndex(item => item.pizza === pizza.pizza);
         if (findIndexPizza === -1) {
