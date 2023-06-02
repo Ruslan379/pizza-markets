@@ -1,4 +1,4 @@
-export const selectLoadingTransactions = state => state.marketPizzas.isLoading;
+export const selectLoadingMarkets = state => state.marketPizzas.isLoading;
 
-export const selectallMarkets = state => state.marketPizzas.allMarkets;
+export const selectAllMarkets = state => state.marketPizzas.allMarkets;
 

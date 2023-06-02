@@ -3,7 +3,7 @@ import { useSelector } from "react-redux"; //!!!
 
 import { toast } from 'react-toastify';
 
-import { selectallMarkets } from 'redux/market/marketSelectors';
+import { selectAllMarkets } from 'redux/market/marketSelectors';
 
 // import pizzaMarkets from "db/pizzaMarkets.json"; //!!!
 
@@ -18,16 +18,13 @@ import css from './Home.module.css';
 export const Home = () => {
     const allChoicePizzasLocalStorage = JSON.parse(localStorage.getItem("allChoicePizzas"));
 
-    const [allPizzas, setaAlPizzas] = useState([]);
+    const [allPizzas, setAllPizzas] = useState([]);
     const [allChoicePizzas, setAllChoicePizzas] = useState(allChoicePizzasLocalStorage || []);
 
-    //!!!
-    const pizzaMarkets = useSelector(selectallMarkets);
-    console.log("Home ==> pizzaMarkets:", pizzaMarkets); //!
-
+    const pizzaMarkets = useSelector(selectAllMarkets);
     const selectShop = id => {
         const [selectShopPizzas] = pizzaMarkets.filter(pizzaMarket => pizzaMarket._id === id);
-        setaAlPizzas(selectShopPizzas.pizzas);
+        setAllPizzas(selectShopPizzas.pizzas);
     };
 
     const addPizzaToCart = pizza => {

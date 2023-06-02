@@ -40,8 +40,20 @@
     margin-right: 8vw;
     text-align: center;
     font-size: 3vw;
+    line-height: 1.5;
     font-weight: bold;
     padding-bottom: 20px;
+}
+
+.headerData {
+    color: red;
+    /* margin-left: 8vw;
+    margin-right: 8vw;
+    text-align: center;
+    font-size: 3vw;
+    line-height: 1.5;
+    font-weight: bold;
+    padding-bottom: 20px; */
 }
 
 .linkButton {

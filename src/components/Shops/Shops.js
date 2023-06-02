@@ -1,6 +1,6 @@
 import { useSelector } from "react-redux";
 
-import { selectallMarkets } from 'redux/market/marketSelectors';
+import { selectAllMarkets } from 'redux/market/marketSelectors';
 
 import css from "./Shops.module.css";
 
@@ -9,8 +9,7 @@ import css from "./Shops.module.css";
 
 // export const Shops = ({ pizzaMarkets, selectShop }) => { 
 export const Shops = ({ selectShop }) => {
-    const pizzaMarkets = useSelector(selectallMarkets);
-    console.log("Shops ==> pizzaMarkets:", pizzaMarkets); //!
+    const pizzaMarkets = useSelector(selectAllMarkets);
 
     return (
         <>

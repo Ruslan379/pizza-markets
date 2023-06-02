@@ -1,15 +1,34 @@
+// import { useState } from "react";
 import { NavLink } from 'react-router-dom';
+import { useSelector } from "react-redux";
+
+
+import { selectAllOrders, selectLastOrderNumber } from 'redux/orders/ordersSelectors';
 
 import css from './OrderCompletion.module.css';
 
 
 
 export const OrderCompletion = () => {
+    let lastOrder = null
+
+    const allOrders = useSelector(selectAllOrders);
+    const lastOrderNumber = useSelector(selectLastOrderNumber);
+    console.log("OrderCompletion --> allOrders:", allOrders); //!
+    console.log("OrderCompletion --> lastOrderNumber:", lastOrderNumber); //!
+    
+    const findLastOrder = lastOrderNumber => {
+        [lastOrder] = allOrders.filter(item => item._id === lastOrderNumber);
+    };
+    findLastOrder(lastOrderNumber);
+
+    console.log("OrderCompletion --> lastOrder:", lastOrder); //!
+    
     return (
         <div className={css.orderCompletionContainer}>
             <div className={css.textContainer}>
-                <p className={css.header}>Your order has been received and will be delivered to you soon</p>
-                <p className={css.header}>Thank you!</p>
+                <p className={css.header}>Thank you, {lastOrder.name}!</p>
+                <p className={css.header}>Your order {lastOrderNumber} has been accepted and will be delivered to you at: <br/>{lastOrder.address} </p>
             </div>
             <NavLink className={css.linkButton} to="/">Go Shop</NavLink>
         </div>

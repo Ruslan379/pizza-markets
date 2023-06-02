@@ -23,6 +23,7 @@ const ordersSlice = createSlice({
     name: 'orders',
     initialState: {
         orders: [],
+        lastOrderNumber: "",
         isLoading: false,
         error: null,
     },
@@ -47,9 +48,11 @@ const ordersSlice = createSlice({
 
         [addOrder.fulfilled](state, { payload }) {
             console.log("ordersSlice/addOrder ==> payload:", payload); //!
+            console.log("ordersSlice/addOrder ==> payload._id:", payload._id); //!
             state.isLoading = false;
             state.error = null;
             state.orders.push(payload);
+            state.lastOrderNumber = payload._id;
         },
 
         // [deleteContact.fulfilled](state, { payload }) {
