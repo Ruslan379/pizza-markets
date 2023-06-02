@@ -3,7 +3,7 @@ import { useSelector } from "react-redux"; //!!!
 
 import { toast } from 'react-toastify';
 
-import { selectAllMarkets } from 'redux/market/marketSelectors';
+import { selectLoadingMarkets, selectAllMarkets } from 'redux/market/marketSelectors';
 
 // import pizzaMarkets from "db/pizzaMarkets.json"; //!!!
 
@@ -20,6 +20,9 @@ export const Home = () => {
 
     const [allPizzas, setAllPizzas] = useState([]);
     const [allChoicePizzas, setAllChoicePizzas] = useState(allChoicePizzasLocalStorage || []);
+
+    const isLoading = useSelector(selectLoadingMarkets);
+    console.log("Home-->isLoading:", isLoading); //!
 
     const pizzaMarkets = useSelector(selectAllMarkets);
     const selectShop = id => {
@@ -52,10 +55,23 @@ export const Home = () => {
     return (
         <div className={css.homeContainer}>
             <div className={css.shops}>
-                <Shops
-                    // pizzaMarkets={pizzaMarkets}
-                    selectShop={selectShop}
-                />
+                <>
+                    {isLoading
+                        ?
+                        (
+                            <div className={css.informationTextContainer}>
+                                <div className={css.informationText}
+                                >
+                                    Please wait, our shops are loading......
+                                </div>
+                            </div>
+                        )
+                        :
+                        (
+                            <Shops selectShop={selectShop}/>
+                        )
+                    }
+                </>
             </div>
             <div className={css.pizzas}>
                 {allPizzas.length > 0
