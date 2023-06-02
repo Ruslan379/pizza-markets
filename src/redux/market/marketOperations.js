@@ -8,8 +8,10 @@ import { toast } from 'react-toastify';
 
 
 //! axios defaults baseURL 
-axios.defaults.baseURL = 'http://localhost:3333/api';
+// axios.defaults.baseURL = 'http://localhost:3333/api';
 // axios.defaults.baseURL = 'https://contact-book-backend52.onrender.com/api';
+axios.defaults.baseURL = 'https://pizza-markets.onrender.com/api';
+
 
 
 
