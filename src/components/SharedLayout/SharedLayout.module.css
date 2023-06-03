@@ -2,8 +2,8 @@
 
 .mainContainer {
     flex-basis: 100vw;
-    height: 99vh;
-    /* height: 100vh; */
+    /* height: 99vh; */
+    height: 100vh;
     padding-top: 20px;
     /* padding-bottom: 20px; */
     display: flex;
