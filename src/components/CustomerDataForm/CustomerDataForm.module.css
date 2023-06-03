@@ -27,7 +27,7 @@
         .submitButtonForm {
             position: absolute;
             bottom: 50px;
-            right: 40px;
+            right: 50px;
             display: inline-block;
             text-decoration: none;
             margin-left: 20px;
@@ -75,7 +75,7 @@
 
     .submitButtonForm {
         position: absolute;
-        bottom: 40px;
+        bottom: 35px;
         right: 35px;
         display: inline-block;
         text-decoration: none;
@@ -123,7 +123,7 @@
     
         .submitButtonForm {
             position: absolute;
-            bottom: 33px;
+            bottom: 35px;
             right: 35px;
             display: inline-block;
             text-decoration: none;
