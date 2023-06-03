@@ -104,7 +104,7 @@ export const History = () => {
                 {customerDataLocalStorage && customerDataLocalStorage.name && allChoicePizzasLocalStorage && (
                     // <NavLink className={css.linkButton} to="/order">Сonfirm</NavLink>
                     <button
-                        className={css.linkButton}
+                        className={`${css.linkButton} ${css.linkButtonConfirm}`}
                         type="button"
                         onClick={() => completionOfTheOrder(totalPrice)}
                     >
