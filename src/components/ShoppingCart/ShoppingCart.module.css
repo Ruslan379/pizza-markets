@@ -62,13 +62,6 @@
     }
 }
 
-/* ! Контейнер для Total Price и копки Submit */
-/* .totalPriceSubmitContainer1 {
-    width: 95%;
-    height: 3vh;
-    outline: 1px solid blue;
-} */
-
 
 /* ! 2.Стили для устройств с шириной экрана от 480px до 767px */
 @media screen and (min-width: 480px) and (max-width: 767px) {

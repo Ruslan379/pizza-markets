@@ -40,6 +40,7 @@ export const Home = () => {
             };
             setAllChoicePizzas([...allChoicePizzas, pizzaAndQuantity]);
             localStorage.setItem("allChoicePizzas", JSON.stringify([...allChoicePizzas, pizzaAndQuantity]));
+            toast.success(`Pizza "${pizza.pizza}" has been added to your cart`, { theme: "colored", position: "top-center", autoClose: 2000 });
         } else {
             allChoicePizzas.map((item, index) => {
                 if (index === findIndexPizza) item.quantity = item.quantity + 1;
@@ -47,8 +48,9 @@ export const Home = () => {
             });
             setAllChoicePizzas([...allChoicePizzas]);
             localStorage.setItem("allChoicePizzas", JSON.stringify([...allChoicePizzas]));
+            toast.info(`Pizza "${pizza.pizza}" has been added to cart again!`, { theme: "colored", position: "top-center", autoClose: 2000 });
         }
-        toast.success(`Pizza "${pizza.pizza}" has been added to your shopping cart`, { theme: "colored", position: "top-center", autoClose: 2000 });
+        // toast.success(`Pizza "${pizza.pizza}" has been added to your shopping cart`, { theme: "colored", position: "top-center", autoClose: 2000 });
     }
 
 

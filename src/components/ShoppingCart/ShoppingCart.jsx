@@ -13,8 +13,6 @@ export const ShoppingCart = () => {
             <div className={css.CustomerOrder}>
                 <ShoppingCartOrder />
             </div>
-            {/* //! Контейнер для Total Price и копки Submit */}
-            {/* <div className={css.totalPriceSubmitContainer}></div> */}
         </div>
     );
 };
