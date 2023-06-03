@@ -17,17 +17,17 @@ export const History = () => {
     const allChoicePizzasLocalStorage = JSON.parse(localStorage.getItem("allChoicePizzas"));
 
     //! Добавление заказа в БД
-    const completionOfTheOrder = totalPrice => {
+    const completionOfTheOrder = async (totalPrice) => {
         const confirmedOrder = {
             ...customerDataLocalStorage,
             order: allChoicePizzasLocalStorage,
             total: totalPrice
         };
-        dispatch(addOrder(confirmedOrder));
+        await dispatch(addOrder(confirmedOrder));
         //! Очистка localStorage
         localStorage.removeItem("customerData");
         localStorage.removeItem("allChoicePizzas");
-        navigate("/order", { replace: true });
+        await navigate("/order", { replace: true });
     }
 
 
