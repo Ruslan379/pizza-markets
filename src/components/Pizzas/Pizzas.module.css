@@ -72,7 +72,8 @@
     }
     .selectPizzaButton:hover,
     .selectPizzaButton:focus {
-        background-color: #c4c4c4;
+        background-color: #fffbcf;
+        color: #9b1616;
     }
 }
 
@@ -137,7 +138,8 @@
     }
     .selectPizzaButton:hover,
     .selectPizzaButton:focus {
-        background-color: #c4c4c4;
+        background-color: #fffbcf;
+        color: #9b1616;
     }
 }
 
@@ -202,7 +204,8 @@
     }
     .selectPizzaButton:hover,
     .selectPizzaButton:focus {
-        background-color: #c4c4c4;
+        background-color: #fffbcf;
+        color: #9b1616;
     }
 }
 
@@ -265,7 +268,8 @@
     }
     .selectPizzaButton:hover,
     .selectPizzaButton:focus {
-        background-color: #c4c4c4;
+        background-color: #fffbcf;
+        color: #9b1616;
     }
 }
 
@@ -328,6 +332,7 @@
     }
     .selectPizzaButton:hover,
     .selectPizzaButton:focus {
-        background-color: #c4c4c4;
+        background-color: #fffbcf;
+        color: #9b1616;
     }
 }

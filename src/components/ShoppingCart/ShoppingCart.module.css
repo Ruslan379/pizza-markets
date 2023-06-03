@@ -120,7 +120,7 @@
     .CustomerOrder {
         overflow-y: auto;
         width: 95%;
-        height: 40vh;
+        height: 38vh;
 
         border: 2px solid rgb(164, 214, 255);
         border-radius: 8px;

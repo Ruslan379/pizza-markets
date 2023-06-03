@@ -37,6 +37,7 @@
 }
 
 .header {
+    color: #154407;
     margin-left: 8vw;
     margin-right: 8vw;
     text-align: center;
@@ -47,7 +48,7 @@
 }
 
 .headerData {
-    color: red;
+    color: rgb(255, 81, 81);
     margin: 0;
 }
 
@@ -60,10 +61,11 @@
     font-weight: 700;
     border: 1px solid rgb(252, 162, 162);
     border-radius: 4px;
-    color: #1a3b10;
+    color: rgb(255, 81, 81);
     box-shadow: 12px 12px 18px rgba(59, 43, 14, 0.23);
 }
 .linkButton:hover,
 .linkButton:focus {
-    background-color: #c4c4c4;
+    color: #154407;
+    background-color: #c0fabe;
 }

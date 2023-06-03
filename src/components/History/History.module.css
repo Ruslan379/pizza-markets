@@ -39,6 +39,7 @@
     font-size: 1.3em;
     font-weight: bold;
     padding-bottom: 20px;
+    color: rgb(0, 111, 190);
     text-decoration: underline;
 }
 
@@ -85,13 +86,14 @@
     font-weight: 700;
     border: 1px solid rgb(255, 203, 223);
     border-radius: 4px;
-    color: #1a3b10;
+    color: rgb(255, 124, 174);
     background-color: inherit;
     box-shadow: 12px 12px 18px rgba(59, 43, 14, 0.23);
 }
 .linkButton:hover,
 .linkButton:focus {
-    background-color: #c4c4c4;
+    color: rgb(0, 149, 255);
+    background-color: rgb(177, 223, 255);
 }
 
 .informationTextContainer {
