@@ -36,7 +36,8 @@ export const CustomerDataForm = () => {
         navigate("/history", { replace: true });
     };
 
-
+    // console.log("allChoicePizzasLocalStorage:", allChoicePizzasLocalStorage); //!
+    // console.log("allChoicePizzasLocalStorage.length:", allChoicePizzasLocalStorage.length); //!
 
     return (
         <>
@@ -90,7 +91,7 @@ export const CustomerDataForm = () => {
                 </label>
                 <button
                     className={
-                        `${allChoicePizzasLocalStorage
+                        `${allChoicePizzasLocalStorage && allChoicePizzasLocalStorage.length > 0
                             ?
                             `${css.submitButtonForm}`
                             :
@@ -99,7 +100,7 @@ export const CustomerDataForm = () => {
                         `
                     }
                     type="submit"
-                    disabled={!allChoicePizzasLocalStorage}
+                    disabled={!allChoicePizzasLocalStorage || !(allChoicePizzasLocalStorage.length > 0)}
                 >
                     Submit
                 </button>

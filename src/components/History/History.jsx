@@ -111,7 +111,10 @@ export const History = () => {
                     </div>
                     <div className={css.buttonContainer}>
                         <NavLink className={css.linkButton} to="/cart">Change</NavLink>
-                        {customerDataLocalStorage && customerDataLocalStorage.name && allChoicePizzasLocalStorage && (
+                        {customerDataLocalStorage &&
+                            customerDataLocalStorage.name &&
+                            allChoicePizzasLocalStorage &&
+                            allChoicePizzasLocalStorage.length > 0 && (
                             <button
                                 className={`${css.linkButton} ${css.linkButtonConfirm}`}
                                 type="button"
