@@ -1,11 +1,11 @@
 import { useState } from "react"; 
-import { useSelector } from "react-redux"; //!!!
+import { useSelector } from "react-redux"; 
 
 import { toast } from 'react-toastify';
 
 import { selectLoadingMarkets, selectAllMarkets } from 'redux/market/marketSelectors';
 
-// import pizzaMarkets from "db/pizzaMarkets.json"; //!!!
+// import pizzaMarkets from "db/pizzaMarkets.json"; //!!! Уже не надо
 
 import { Shops } from 'components/Shops/Shops';
 import { Pizzas } from 'components/Pizzas/Pizzas';

@@ -8,7 +8,6 @@ export const ShoppingCartOrder = () => {
     const togle = () => setValue(!value)
 
     const allChoicePizzasLocalStorage = JSON.parse(localStorage.getItem("allChoicePizzas"));
-    // console.log("ДО УДАЛЕНИЯ-->allChoicePizzasLocalStorage:", allChoicePizzasLocalStorage); //!
 
     let totalPrice = 0;
     if (allChoicePizzasLocalStorage) {
@@ -19,14 +18,10 @@ export const ShoppingCartOrder = () => {
     };
 
     const deletePizza = (index) => {
-        console.log("ПОСЛЕ УДАЛЕНИЯ-->indexId:", index);
         const allChoicePizzasWithDeleting = allChoicePizzasLocalStorage.filter((item) => item !== allChoicePizzasLocalStorage[index]);
         localStorage.setItem("allChoicePizzas", JSON.stringify(allChoicePizzasWithDeleting));
         togle();
     };
-
-
-    console.log("allChoicePizzasLocalStorage:", allChoicePizzasLocalStorage); //!
 
 
     return (
