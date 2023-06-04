@@ -27,7 +27,7 @@ export const OrderCompletion = () => {
                     <span className={`${css.header} ${css.headerData}`}> {lastOrder ? lastOrder.name : "Сustomer"}</span>
                     !
                 </p>
-                <p className={css.header}>Your order
+                <p className={css.header}>Your order №:
                     <span className={`${css.header} ${css.headerData}`}> {lastOrderNumber ? lastOrderNumber : "number"} </span>
                     has been accepted and will be delivered to you at:
                     <br />
