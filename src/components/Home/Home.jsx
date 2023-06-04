@@ -31,7 +31,6 @@ export const Home = () => {
     };
 
     const addPizzaToCart = pizza => {
-
         const findIndexPizza = allChoicePizzas.findIndex(item => item.pizza === pizza.pizza);
         if (findIndexPizza === -1) {
             const pizzaAndQuantity = {
@@ -48,9 +47,8 @@ export const Home = () => {
             });
             setAllChoicePizzas([...allChoicePizzas]);
             localStorage.setItem("allChoicePizzas", JSON.stringify([...allChoicePizzas]));
-            toast.info(`Pizza "${pizza.pizza}" has been added to cart again!`, { theme: "colored", position: "top-center", autoClose: 2000 });
+            toast.info(`You have added ${allChoicePizzas[findIndexPizza].quantity} pizzas "${pizza.pizza}" to your cart!`, { theme: "colored", position: "top-center", autoClose: 2000 });
         }
-        // toast.success(`Pizza "${pizza.pizza}" has been added to your shopping cart`, { theme: "colored", position: "top-center", autoClose: 2000 });
     }
 
 
