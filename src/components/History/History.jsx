@@ -11,7 +11,6 @@ import css from './History.module.css';
 
 
 
-
 export const History = () => {
     const dispatch = useDispatch();
     const navigate = useNavigate();
@@ -77,7 +76,6 @@ export const History = () => {
                             )
                             :
                             (
-
                                 <div className={css.informationTextContainer}>
                                     <div className={css.informationText}
                                     >
@@ -126,7 +124,5 @@ export const History = () => {
                 </>
             }
         </div>
-        
-        
     );
 };
