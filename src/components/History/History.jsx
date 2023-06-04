@@ -76,7 +76,7 @@ export const History = () => {
                 }
             </div>
             <div className={css.historyOrder}>
-                {allChoicePizzasLocalStorage
+                {allChoicePizzasLocalStorage && allChoicePizzasLocalStorage.length > 0
                     ?
                     (
                         <>

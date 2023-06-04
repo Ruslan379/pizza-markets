@@ -8,6 +8,7 @@ export const ShoppingCartOrder = () => {
     const togle = () => setValue(!value)
 
     const allChoicePizzasLocalStorage = JSON.parse(localStorage.getItem("allChoicePizzas"));
+    // console.log("ДО УДАЛЕНИЯ-->allChoicePizzasLocalStorage:", allChoicePizzasLocalStorage); //!
 
     let totalPrice = 0;
     if (allChoicePizzasLocalStorage) {
@@ -17,11 +18,20 @@ export const ShoppingCartOrder = () => {
         }, 0);
     };
 
+    const deletePizza = (index) => {
+        console.log("ПОСЛЕ УДАЛЕНИЯ-->indexId:", index);
+        const allChoicePizzasWithDeleting = allChoicePizzasLocalStorage.filter((item) => item !== allChoicePizzasLocalStorage[index]);
+        localStorage.setItem("allChoicePizzas", JSON.stringify(allChoicePizzasWithDeleting));
+        togle();
+    };
+
+
+    console.log("allChoicePizzasLocalStorage:", allChoicePizzasLocalStorage); //!
 
 
     return (
         <>
-            {allChoicePizzasLocalStorage
+            {allChoicePizzasLocalStorage && allChoicePizzasLocalStorage.length > 0
                 ?
                 (
                     <ul className={css.list}>
@@ -41,7 +51,7 @@ export const ShoppingCartOrder = () => {
                                     <p className={css.namePizza}>"{item.pizza}"</p>
                                     <p className={css.pricePizza}>{item.price * item.quantity} грн.</p>
 
-                                    <div>
+                                    <div className={css.inputDeleteButtonContainer}>
                                         <input className={css.inputQuantity}
                                             type="number"
                                             name="quantity"
@@ -54,6 +64,14 @@ export const ShoppingCartOrder = () => {
                                                 localStorage.setItem("allChoicePizzas", JSON.stringify([...allChoicePizzasLocalStorage]));
                                             }}
                                         />
+                                        <button
+                                            type="button"
+                                            className={css.pizzaDeleteButton}
+                                            // onClick={toggleModal}
+                                            onClick={() => deletePizza(index)}
+                                        >
+                                            Delete
+                                        </button>
                                     </div>
                                 </div>
                             </li>
@@ -70,7 +88,7 @@ export const ShoppingCartOrder = () => {
                     </div>
                 )
             }
-            {allChoicePizzasLocalStorage && (
+            {allChoicePizzasLocalStorage && allChoicePizzasLocalStorage.length > 0 && (
                 <div className={css.shoppingCartPriceSubmitContainer}>
                     <p className={css.totalPriceText}
                     >
