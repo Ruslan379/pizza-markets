@@ -129,8 +129,6 @@
 
 //! POST @ /orders
 
-//! Required for a modal window --> Преренесено в ModalPizzaLDeleteWindow
-
 //! axios defaults baseURL
 
 //! remote backend 
@@ -141,12 +139,4 @@
 
 //! МИНИМАЛЬНОЕ значение quantity
 
-//! Модальное окно
-
-//! Модальное окно + большая картинка
-
 //! Очистка localStorage
-
-//!----------------------------- Преобразование defaultImage в Base64: ----------------------------
-
-//!__________________________ Преобразование defaultImage в Base64: __________________________
