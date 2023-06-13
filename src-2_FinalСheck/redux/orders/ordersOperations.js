@@ -7,9 +7,9 @@ import { toast } from 'react-toastify';
 
 
 
-//! axios defaults baseURL
-// axios.defaults.baseURL = 'http://localhost:3333/api'; //! local backend 
-axios.defaults.baseURL = 'https://pizza-markets.onrender.com/api'; //! remote backend 
+//! axios defaults baseURL (возможно, это не надо, т.к. уже есть в authOperations.js)
+// axios.defaults.baseURL = 'http://localhost:3333/api';
+axios.defaults.baseURL = 'https://pizza-markets.onrender.com/api';
 
 //! GET @ /order
 export const getAllOrders = createAsyncThunk(

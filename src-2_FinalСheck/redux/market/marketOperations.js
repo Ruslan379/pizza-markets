@@ -7,9 +7,9 @@ import { toast } from 'react-toastify';
 
 
 
-//! axios defaults baseURL
-// axios.defaults.baseURL = 'http://localhost:3333/api'; //! local backend 
-axios.defaults.baseURL = 'https://pizza-markets.onrender.com/api'; //! remote backend 
+//! axios defaults baseURL 
+// axios.defaults.baseURL = 'http://localhost:3333/api';
+axios.defaults.baseURL = 'https://pizza-markets.onrender.com/api';
 
 
 
@@ -31,22 +31,5 @@ export const getAllMarkets = createAsyncThunk(
             toast.error(`Ошибка запроса: ${error.message === "Request failed with status code 404" ? "Нет такой коллекции пользователей" : error.message}`, { position: "top-center", autoClose: 2000 });
             return thunkAPI.rejectWithValue(error.message);
         }
-    }
-);
-
-
-//! togleIsOneShop @ /markets
-export const togleIsOneShop = createAsyncThunk(
-    'markets/togleIsOneShop',
-    async () => {
-        return null
-    }
-);
-
-//! togleIsOneShop @ /markets
-export const setShopIndexSelection = createAsyncThunk(
-    'markets/setShopIndexSelection',
-    async (shopIndex) => {
-        return shopIndex
     }
 );
