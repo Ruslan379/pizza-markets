@@ -1,14 +1,16 @@
 {
   "files": {
-    "main.css": "/pizza-markets/static/css/main.22b5f847.css",
-    "main.js": "/pizza-markets/static/js/main.06bfe813.js",
+    "main.css": "/pizza-markets/static/css/main.a6827fe3.css",
+    "main.js": "/pizza-markets/static/js/main.b891e285.js",
     "static/media/-large.webp": "/pizza-markets/static/media/A48382B1BEBB8CBDB0-large.467687a4c4cc774c90cc.webp",
+    "static/media/05-05.PizzaHouse_Americano.webp": "/pizza-markets/static/media/05-05.PizzaHouse_Americano.881233e93ff2a3bb6e6c.webp",
+    "static/media/free-icon-pizza-512-7467230.png": "/pizza-markets/static/media/free-icon-pizza-512-7467230.13683e11525bf1a25884.png",
     "index.html": "/pizza-markets/index.html",
-    "main.22b5f847.css.map": "/pizza-markets/static/css/main.22b5f847.css.map",
-    "main.06bfe813.js.map": "/pizza-markets/static/js/main.06bfe813.js.map"
+    "main.a6827fe3.css.map": "/pizza-markets/static/css/main.a6827fe3.css.map",
+    "main.b891e285.js.map": "/pizza-markets/static/js/main.b891e285.js.map"
   },
   "entrypoints": [
-    "static/css/main.22b5f847.css",
-    "static/js/main.06bfe813.js"
+    "static/css/main.a6827fe3.css",
+    "static/js/main.b891e285.js"
   ]
 }

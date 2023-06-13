@@ -129,8 +129,24 @@
 
 //! POST @ /orders
 
-//! axios defaults baseURL 
+//! Required for a modal window --> Преренесено в ModalPizzaLDeleteWindow
 
-//! axios defaults baseURL (возможно, это не надо, т.к. уже есть в authOperations.js)
+//! axios defaults baseURL
+
+//! remote backend 
+
+//! togleIsOneShop @ /markets
+
+//! МАКСИМАЛЬНОЕ значение quantity
+
+//! МИНИМАЛЬНОЕ значение quantity
+
+//! Модальное окно
+
+//! Модальное окно + большая картинка
 
 //! Очистка localStorage
+
+//!----------------------------- Преобразование defaultImage в Base64: ----------------------------
+
+//!__________________________ Преобразование defaultImage в Base64: __________________________
