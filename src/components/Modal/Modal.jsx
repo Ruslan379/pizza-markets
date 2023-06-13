@@ -54,7 +54,20 @@ export function Modal({ children, onClose, bgColor }) {
         }
         onClick={handleBackdropClick}
       >
-          <div className={css.modal}>
+        <div
+          // className={css.modal}
+          className={
+                    `
+                      ${(bgColor === "HomePageBgColor")
+                          ?
+                          `${css.modal} ${css.modalWide}`
+                          :
+                          `${css.modal}`
+                      }
+                    `
+        }
+        >
+            
           {children}
           </div>
       </div>,
