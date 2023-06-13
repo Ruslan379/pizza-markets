@@ -69,7 +69,7 @@ export function Modal({ children, onClose, bgColor }) {
         >
             
           {children}
-          </div>
+        </div>
       </div>,
       modalRoot,
     );
