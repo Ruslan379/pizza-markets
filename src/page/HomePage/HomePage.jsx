@@ -58,7 +58,6 @@ export const HomePage = () => {
     }
 
 
-    // console.log("HomePage-->shopIndex:", shopIndex); //!
 
     return (
         <div className={css.homeContainer}>
@@ -79,14 +78,12 @@ export const HomePage = () => {
                         (
                             <HomeShopsList
                                 selectShop={selectShop}
-                                // shopIndex={shopIndex}
                             />
                         )
                     }
                 </>
             </div>
             <div
-                // className={css.pizzas}
                 className={
                     `${allPizzas.length > 0
                         ?
