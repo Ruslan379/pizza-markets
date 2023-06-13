@@ -4,7 +4,6 @@
 .cartContainer {
     position: relative;
     width: 90vw;
-        /* height: 80vh; */
         height: 79vh;
     display: flex;
         flex-direction: column;
@@ -41,7 +40,6 @@
 .customerOrder {
     overflow-y: auto;
     width: 100%;
-        /* height: 38vh; */
         height: 40vh;
     margin-bottom: 80px;
     border: 2px solid rgb(164, 214, 255);

@@ -5,14 +5,9 @@ import { toast } from 'react-toastify';
 
 
 
-
-
 //! axios defaults baseURL
 // axios.defaults.baseURL = 'http://localhost:3333/api'; //! local backend 
 axios.defaults.baseURL = 'https://pizza-markets.onrender.com/api'; //! remote backend 
-
-
-
 
 
 //! GET @ /markets
@@ -21,10 +16,6 @@ export const getAllMarkets = createAsyncThunk(
     async (_, thunkAPI) => {
         try {
             const { data } = await axios.get('/markets');
-            // console.log("markets/getAllMarkets==>data:", data); //!
-            // const { data: { markets } } = await axios.get('/markets'); 
-            // const { markets } = data; 
-            // console.log("markets/getAllMarkets == >data.markets:", data.markets); //!
             return data.markets; //?
         } catch (error) {
             console.log(error); //!
@@ -33,7 +24,6 @@ export const getAllMarkets = createAsyncThunk(
         }
     }
 );
-
 
 //! togleIsOneShop @ /markets
 export const togleIsOneShop = createAsyncThunk(

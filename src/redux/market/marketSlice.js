@@ -37,7 +37,6 @@ const marketsSlice = createSlice({
         [setShopIndexSelection.rejected]: handleRejected,
 
         [getAllMarkets.fulfilled](state, { payload }) {
-            // console.log("getAllMarkets.fulfilled --> payload:", payload); //!
             state.allMarkets = payload;
             state.isLoading = false;
             state.error = null;

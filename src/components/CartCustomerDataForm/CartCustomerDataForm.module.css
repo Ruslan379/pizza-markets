@@ -2,12 +2,10 @@
 
 /* ! 1.ОБЩИЕ Стили для устройств с шириной экрана от 0 до 479px */
     .form {
-        /* overflow-y: auto; */
         width: 75vw;
         height: 90%;
         display: flex;
             flex-direction: column;
-            /* justify-content: space-evenly; */
             justify-content: center;
         /* outline: 1px solid blue; */
     }
@@ -33,7 +31,6 @@
     }
     .submitButtonForm {
         position: absolute;
-        /* bottom: 50px; */
         bottom: 36px;
         right: 60px;
         display: inline-block;
@@ -61,7 +58,6 @@
     }
 
     .submitButtonForm {
-        /* bottom: 50px; */
         bottom: 36px;
         right: 60px;
     }

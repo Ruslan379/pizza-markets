@@ -39,9 +39,7 @@ export const addOrder = createAsyncThunk(
     'orders/addOrder',
     async (orderConfirmed, thunkAPI) => {
         try {
-            // console.log("orders/addOrder ==> orderConfirmed:", orderConfirmed); //!
             const { data: { order } } = await axios.post('/orders', orderConfirmed);
-            // console.log("orders/addOrder ==> order:", order); //!
             return order;
         } catch (error) {
             console.log(error); //!

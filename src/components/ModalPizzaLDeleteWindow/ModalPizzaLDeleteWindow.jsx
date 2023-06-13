@@ -2,10 +2,10 @@ import PropTypes from 'prop-types';
 
 import css from './ModalPizzaLDeleteWindow.module.css';
 
-//------------------------------------------------------------------------------------------------------------------
+
+
 export const ModalPizzaLDeleteWindow = ({ deletePizzaIndex, toggleModal }) => {
     const allChoicePizzasLocalStorage = JSON.parse(localStorage.getItem("allChoicePizzas"));
-    // console.log("ModalPizzaLDeleteWindow --> allChoicePizzasLocalStorage:", allChoicePizzasLocalStorage); //!
     
     const deletePizza = (index) => {
         const allChoicePizzasWithDeleting = allChoicePizzasLocalStorage.filter((item) => item !== allChoicePizzasLocalStorage[index]);

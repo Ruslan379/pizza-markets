@@ -36,8 +36,6 @@ export const CartCustomerDataForm = () => {
         navigate("/history", { replace: true });
     };
 
-    // console.log("allChoicePizzasLocalStorage:", allChoicePizzasLocalStorage); //!
-    // console.log("allChoicePizzasLocalStorage.length:", allChoicePizzasLocalStorage.length); //!
 
     return (
         <>

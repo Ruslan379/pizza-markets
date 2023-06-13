@@ -36,7 +36,6 @@ export function Modal({ children, onClose, bgColor }) {
 
     return createPortal(
       <div
-        // className={css.overlay}
         className={
                     `
                       ${(bgColor === "HomePageBgColor")

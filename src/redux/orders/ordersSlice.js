@@ -37,8 +37,6 @@ const ordersSlice = createSlice({
         },
 
         [addOrder.fulfilled](state, { payload }) {
-            // console.log("ordersSlice/addOrder ==> payload:", payload); //!
-            // console.log("ordersSlice/addOrder ==> payload._id:", payload._id); //!
             state.isLoading = false;
             state.error = null;
             state.orders.push(payload);
